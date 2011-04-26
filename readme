@@ -1,0 +1,92 @@
+Ok guys this unfortunately takes a bit of configuration but I was able to get it working. Here are the steps:
+
+Step 0: Installing Python - probably don't need to do anything
+	Should come pre-installed on OSX with version 2.6.1, which is what I'm using.
+
+
+I. Installing PyDev for Eclipse
+
+See Manual: http://pydev.org/manual_101_root.html
+
+The easiest way is to have Eclipse install it for you by opening Eclipse and going to 
+Help > Install New Software. For instructions go to (http://pydev.org/manual_101_install.html#id4) and follow
+the part titled "Installing with the update site".
+
+
+
+
+II. Installing Numberjack - the painful part
+
+If you guys are running some version of OSX or linux this will work. For Windows you'd need Cygwin or PuTTy too.
+
+Download the zip from http://4c110.ucc.ie/numberjack/download and extract it.
+
+Navigate to your newly extracted directory in terminal and type the commands:
+	sudo bash
+	export ARCHFLAGS='-arch i386 -arch x86_64'
+	make install
+	export PYTHONPATH=/home/<your user name>/<path to numberjack>/numberjack.0.1.10-11-24/local_lib:$PYTHONPATH
+	export PATH=/home/<your user name>/<path to numberjack>/numberjack.0.1.10-11-24/local_lib:$PATH
+	
+The last two may be unnecessary but they won't hurt. I ran into more problems than normal because of the way
+my environment was configured, but hopefully the above will work for you guys. If not let me know, cause
+I may have run into the same problems.
+
+Now we have to add this to our System's PYTHONPATH in Eclipse.
+
+1. Open Eclipse and go to preferences
+2. Expand 'PyDev' in the list on the left
+3. Select 'Interpreter - Python'
+4. Click on "New Folder"
+5. Click "Macintosh HD" in the finder window and navigate to "/Library/Python/2.X/site-packages" and hit ok
+6. Make sure you now have "/Library/Python/2.X/site-packages" in the list of System libs... this should cover
+your Numberjack install, which installs by default to that directory
+
+
+
+
+
+III. Installing git (if you don't already have it)
+
+Download the OSX installer here: http://code.google.com/p/git-osx-installer/downloads/list?can=3
+You probably want the one at the top of the list.
+If you're running linux instead of OSX look at this page: http://book.git-scm.com/2_installing_git.html
+
+
+
+
+
+IV. Getting the project from the repository
+
+I set up a public github project at https://github.com/hosemagi/CS175Project.
+
+To get the project:
+
+1. Open terminal
+2. Navigate to your Documents/Eclipse/Workspace directory
+3. Type the following command:
+	git clone git@github.com:hosemagi/CS175Project.git .
+	
+	This should copy all the files from the repository into a folder called CS175Project into your eclipse workspace.
+4. Open Eclipse and go to File > Import
+5. Open the "General" folder and select "Existing Projects into Workspace"
+6. Next to where it has the field for "Select root directory:" hit browse and browse to 
+	/Documents/Eclipse/Workspace/CS175Project
+7. Hit Finish
+8. Try running main.py. If it works you're up and running!
+
+If you haven't used git before, it's just like CVS/SVN except super easy. I wouldn't bother trying to integrate
+it into Eclipse, it's easy enough to use from the command line. The basics are:
+
+After you edit a file, create a file, delete a file, or make any change in general... navigate to the CS175Project
+directory in your terminal and:
+	git add .
+	git commit -m 'your commit message'
+	git push
+	
+To update to the latest version on the repo, just:
+	git pull
+	
+Here's a good git crash course with tons of info that should be understandable if you've used SVN before: 
+	http://git.or.cz/course/svn.html
+	
