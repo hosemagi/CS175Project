@@ -1,8 +1,9 @@
-#########
+#########################
 # This is our Numberjack demo - if you can get this to run you're good to go!
-#########
+#########################
 
 from Numberjack import *
+
 
 def model_queens(N):
     queens = [Variable(N) for i in range(N)]
