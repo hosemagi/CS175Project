@@ -1,3 +1,7 @@
+'''
+@author: preston
+'''
+
 #import XML parsing packages from python standard library
 import xml.dom.minidom
 
@@ -21,6 +25,9 @@ import xml.dom.minidom
 #        numCoursesRequired    (min number of courses that must be taken from this group)
 #        courses               (list of courses in this group)
 #
+#        Methods
+#            <none>
+#
 # Class Major
 #    Fields
 #        title            (human readable pretty title)
@@ -29,6 +36,14 @@ import xml.dom.minidom
 #        courses          (an internal dictionary of courses that maps course codes to instances
 #                          of course objects)
 #                         NOTE: use major.getCourse(courseCode) to get a course instance by its code
+#
+#    Methods
+#        STATIC getMajor(majorName)
+#            loads and returns an instance of 'Major' for the given major name (cse, cs, ics, in4matx)
+#            automatically handles xml parsing from file
+#        
+#        getCourse(courseCode)
+#            returns an instance of 'Course' for the given course code in the major
 
 class Course:
     """Defines a course"""
