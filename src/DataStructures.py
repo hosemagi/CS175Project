@@ -1,6 +1,35 @@
 #import XML parsing packages from python standard library
 import xml.dom.minidom
 
+# Documentation
+#
+# Class Course
+#    Fields
+#        title            (human readable pretty title)
+#        courseCode       (formal course code)
+#        units            (number of units for this course)
+#        prereqs          (a list of course codes that represent prerequisite courses)
+#                         NOTE: you can access Course objects by using major.getCourse(courseCode)
+#        offerings        a list of terms when this course is offered (@TODO: IMPLEMENT THIS)
+#
+#    Methods
+#        <none>
+#
+# Class CourseGroup
+#    Fields
+#        title                 (human readable pretty title)
+#        numCoursesRequired    (min number of courses that must be taken from this group)
+#        courses               (list of courses in this group)
+#
+# Class Major
+#    Fields
+#        title            (human readable pretty title)
+#        minUnits         (minimum cumulative units required for major)
+#        courseGroups     (list of course groups for this major)
+#        courses          (an internal dictionary of courses that maps course codes to instances
+#                          of course objects)
+#                         NOTE: use major.getCourse(courseCode) to get a course instance by its code
+
 class Course:
     """Defines a course"""
     
