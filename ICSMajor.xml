@@ -11,20 +11,18 @@
 		<course>
 			<title>Intro to Computer Science I</title>
 			<code>ICS21</code>
-			<units>6<units>
+			<units>6</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
 			<prereqs>
-				<course>
-				</course>
 			</prereqs>
 		</course>
 		
 		<course>
 			<title>Intro to Computer Science II</title>
 			<code>ICS22</code>
-			<units>6<units>
+			<units>6</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -36,7 +34,7 @@
 		<course>
 			<title>Fundamental Data Structures</title>
 			<code>ICS23</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -48,7 +46,7 @@
 		<course>
 			<title>Intro to Computer Organization</title>
 			<code>ICS51</code>
-			<units>6<units>
+			<units>6</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -61,7 +59,7 @@
 		<course>
 			<title>Intro to Software Engineering</title>
 			<code>ICS52</code>
-			<units>6<units>
+			<units>6</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -72,7 +70,6 @@
 	</courses>
 </course_group>
 
-#ICS Lower Division Math
 <course_group>
 	<title>ICS Lower Division Math</title>
 	<num_courses_required>6</num_courses_required>
@@ -80,7 +77,7 @@
 		<course>
 			<title>Calculus</title>
 			<code>MATH2A</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -91,7 +88,7 @@
 		<course>
 			<title>Calculus</title>
 			<code>MATH2B</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -103,34 +100,40 @@
 		<course>
 			<title>Boolean Algebra and Symbolic Logic</title>
 			<code>ICS6B</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
+			<prereqs>
+			</prereqs>
 		</course>
 			
 		<course>
 			<title>Discrete Math for CS</title>
 			<code>ICS6D</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
+			<prereqs>
+			</prereqs>
 		</course>
 		
 		<course>
 			<title>Linear Algebra</title>
 			<code>MATH6G</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
+			<prereqs>
+			</prereqs>
 		</course>
 		
 		<course>
-			<title>Intro to Prob & Stats for CS</title>
+			<title>Intro to Prob and Stats for CS</title>
 			<code>MATH67</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -148,9 +151,9 @@
 	<courses>
 		
 		<course>
-			<title>Software Tools & Methods</title>
+			<title>Software Tools and Methods</title>
 			<code>IN4MATX111</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -162,7 +165,7 @@
 		<course>
 			<title>Social Analysis of Computerization</title>
 			<code>IN4MATX161</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -175,7 +178,7 @@
 		<course>
 			<title>Concepts in Programming Languages</title>
 			<code>CS141</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -186,9 +189,9 @@
 		</course>
 		
 		<course>
-			<title>Compilers & Interpreters</title>
+			<title>Compilers and Interpreters</title>
 			<code>CS142A</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -200,7 +203,7 @@
 		<course>
 			<title>Principles of Operating Systems</title>
 			<code>CS143A</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -211,9 +214,9 @@
 		</course>
 		
 		<course>
-			<title>Design & Analysis of Algorithms</title>
+			<title>Design and Analysis of Algorithms</title>
 			<code>CS161</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -230,7 +233,7 @@
 		<course>
 			<title>Intro to Artificial Intelligence</title>
 			<code>CS171</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -245,7 +248,7 @@
 		<course>
 			<title>Digital Logic Design</title>
 			<code>CS151</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -259,7 +262,7 @@
 		<course>
 			<title>Computer Systems Architecture</title>
 			<code>CS152</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -276,9 +279,9 @@
 	<courses>
 	
 		<course>
-			<title>Software Testing & QA</title>
+			<title>Software Testing and QA</title>
 			<code>IN4MATX115</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -289,9 +292,9 @@
 		</course>
 		
 		<course>
-			<title>Software Testing & QA</title>
+			<title>Software Testing and QA</title>
 			<code>IN4MATX115</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -304,7 +307,7 @@
 		<course>
 			<title>Software Architectures</title>
 			<code>IN4MATX123</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -316,7 +319,7 @@
 		<course>
 			<title>Human Computer Interaction</title>
 			<code>IN4MATX131</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -333,9 +336,9 @@
 	<courses>
 	
 		<course>
-			<title>Computer & Network Security</title>
+			<title>Computer and Network Security</title>
 			<code>CS134</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -347,9 +350,9 @@
 		</course>
 		
 		<course>
-			<title>Formal Language & Automation</title>
+			<title>Formal Language and Automation</title>
 			<code>CS162</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -367,7 +370,7 @@
 		<course>
 			<title>Graph Algorithms</title>
 			<code>CS163</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -379,7 +382,7 @@
 		<course>
 			<title>Computational Geometry</title>
 			<code>CS164</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -399,7 +402,7 @@
 		<course>
 			<title>Project in HCI</title>
 			<code>IN4MATX132</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -411,7 +414,7 @@
 		<course>
 			<title>Project in Software System Design</title>
 			<code>IN4MATX117</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -423,7 +426,7 @@
 		<course>
 			<title>Project in Social Impact of Computing</title>
 			<code>IN4MATX163</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -435,7 +438,7 @@
 		<course>
 			<title>Language Proc Construction</title>
 			<code>CS142B</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -447,7 +450,7 @@
 		<course>
 			<title>Project in Operating Systems</title>
 			<code>CS143B</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -459,7 +462,7 @@
 		<course>
 			<title>Advanced Computer Networks</title>
 			<code>CS133</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -469,9 +472,9 @@
 		</course>
 		
 		<course>
-			<title>Project in Algorithms & Data Structures</title>
+			<title>Project in Algorithms and Data Structures</title>
 			<code>CS165</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -483,7 +486,7 @@
 		<course>
 			<title>Project in Artificial Intelligence</title>
 			<code>CS175</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -495,7 +498,7 @@
 		<course>
 			<title>Computer Game Development</title>
 			<code>CS113</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
@@ -507,7 +510,7 @@
 		<course>
 			<title>Language Proc Construction</title>
 			<code>CS142B</code>
-			<units>4<units>
+			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
