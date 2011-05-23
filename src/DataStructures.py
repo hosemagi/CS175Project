@@ -48,36 +48,32 @@ import xml.dom.minidom
 class Course:
     """Defines a course"""
     
-    title = ""
-    courseCode = ""
-    units = 0
-    prereqs = []
-    offerings = []
-    
     def __init__(self):
         print "Initializing course..."
+        self.prereqs = []
+        self.units = 0
+        self.courseCode = ""
+        self.offerings = []
+        self.title = ""
         
 class CourseGroup:
     """Defines a requirement group for a major, created by a Major object"""
     
-    title = ""
-    numCoursesRequired = 0
-    courses = []
-    
     def __init__(self):
         print "Initializing course group..."
+        self.title = ""
+        self.numCoursesRequired = 0
+        self.courses = []
 
 class Major:
     """Class for holding information for a given major, initialized with XML file"""
     
-    title = ""
-    minUnits = 0
-    courseGroups = []
-    courses = dict()
-    
-    
     def __init__(self):
         print "Initializing major..."
+        self.title = ""
+        self.minUnits = []
+        self.courses = dict()
+        self.courseGroups = []
         
     def getCourse(self, courseCode):
         return self.courses[courseCode]
@@ -120,6 +116,7 @@ class Major:
                 for courseNode in coursesNodes:
                     print "----------"
                     course = Course()
+                    print "DEBUG: " + str(course.prereqs)
                     courseTitleNode = courseNode.getElementsByTagName("title")
                     courseUnitNode = courseNode.getElementsByTagName("units")
                     courseCodeNode = courseNode.getElementsByTagName("code")
@@ -130,8 +127,8 @@ class Major:
                     course.units = courseUnitNode[0].firstChild.nodeValue
                     course.courseCode = courseCodeNode[0].firstChild.nodeValue
                     
-                    for courseCodeNode in coursePrereqsNodes:
-                        course.prereqs.append(courseCodeNode.firstChild.nodeValue)
+                    for node in coursePrereqsNodes:
+                        course.prereqs.append(node.firstChild.nodeValue)
                     
                     print "Course : " + course.title
                     print "Code: " + course.courseCode
