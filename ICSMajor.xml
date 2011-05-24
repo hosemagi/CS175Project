@@ -277,19 +277,6 @@
 	<title>Informatics Elective</title>
 	<num_courses_required>1</num_courses_required>
 	<courses>
-	
-		<course>
-			<title>Software Testing and QA</title>
-			<code>IN4MATX115</code>
-			<units>4</units>
-			<offerings>
-				<term_id></term_id>
-			</offerings>
-			<prereqs>
-				<course_code>ICS6B</course_code>
-				<course_code>ICS52</course_code>
-			</prereqs>
-		</course>
 		
 		<course>
 			<title>Software Testing and QA</title>

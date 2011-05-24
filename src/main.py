@@ -1,117 +1,73 @@
-#########################
-# This is our Numberjack demo - if you can get this to run you're good to go!
+###########################
+# main.py
+# Group 6: Academic Planner
+###########################
 
-# TEst from Will's machine x2
-
-#########################
-
+from datetime import datetime
 from Numberjack import *
+import Mistral
+import DataStructures
 
-# Data structure for storing information about courses
-class Course:
-    def __init__(self, index, course_title, course_code, num_units):
-        self.index = index
-        self.course_title = course_title
-        self.course_code = course_code
-        self.num_units = num_units
-        self.prereqs = []
+# creates and solves a model for a given major
+def model_courses(majorName):
+    newMajor = DataStructures.Major.getMajor(majorName)
+    majorTitle = newMajor.title
+    print "Major: " + majorTitle
+    minUnits = newMajor.minUnits
+    print "Minimum units: " + str(minUnits)
+    courseGroups = newMajor.courseGroups
+    allCourses = newMajor.courses
     
-    def add_prerequisite(self, prereq):
-        self.prereqs.append(prereq)
-
-# Creates/returns the list of courses for the specified major
-def build_course_data(major):
-    if(major == "CSE"):
-        return build_cse_course_data()
-    elif(major == "CS"):
-        return build_cs_course_data()
-    elif(major == "ICS"):
-        return build_ics_course_data()
-    elif(major == "Informatics"):
-        return build_informatics_course_data()
-    else:
-        print "Invalid Major"
-        return []
-
-def build_cse_course_data():
-    #builds a list of Course objects representing the courses for the CSE major
-    return []
-
-def build_cs_course_data():
-    #builds a list of Course objects representing the courses for the CS major
-    return []
-
-def build_ics_course_data():
-    #builds a list of Course objects representing the courses for the ICS major
-    return []
-
-def build_informatics_course_data():
-    #builds a list of Course objects representing the courses for the Informatics major
-    return []
-
-def model_courses(N, max_terms, min_units, prereqs, course_data):
-    courses = VarArray(N, 0, max_terms+1) #0 means course not taken, otherwise represents the term the course was taken
-    units = VarArray(N, 6)
     
-    model = Model(
-        #no term was scheduled later than max_terms (objective function)
-        [courses[i] < max_terms for i in range(len(courses))], 
+    max_terms = 15 #might need to change/implement differently
+    term_course_load_limit = 4
+    total_classes = len(allCourses)
+    print "Total # of classes: " + str(total_classes)
+    scheduled = VarArray(total_classes, 0, max_terms)
+    
+    model = Model()
+    
+    # add constraint that all courses scheduled before max_terms
+    model.add([ scheduled[c] <= max_terms for c in scheduled ])
+    
+    for i in range(len(courseGroups)):
+        courseGroup = courseGroups[i]
+        numCoursesRequired = courseGroup.numCoursesRequired
+        courses = courseGroup.courses
+        print str(courses)
+        courseLength = len(courses)
+        print courseLength
         
-        #prereqs met for all chosen courses - (a)prereq taken (b)prereq taken before current
-        [courses[prereqs[i][j]] < courses[i] for j in range(len(prereqs[i])) for i in range(len(courses)) if courses[i] > 0],
+        # initialize variable array for this group
+        courseVariables = VarArray(len(courses), 0, max_terms)
         
-        #sum of total units taken must be >= min_units
-        Sum([units[i] for i in range(len(courses)) if courses[i] > 0]) >= min_units
+        # add constraint for each courseGroup
+        model.add([ sum((courseVariables[course]>0) for course in range(len(courses)))>=numCoursesRequired ])
+    
+    for term in range(max_terms):
+        # add constraint for each term that "course_load_limit" not exceeded
+        model.add([ sum((scheduled[course_c] == term) for course_c in range(total_classes))<=term_course_load_limit ])
         
-        #additional constraints will go here
-    )
-        
-    return model;
+    # TODO #
+    # add prereqs contraint
+    # add minimum total units constraint
+    # add "course offering" constraints
+    
+    #return model;
+    msolver = Mistral.Solver(model)
+    
+    print "Solving..."
+    starttime = datetime.now()
+    #msolver.solve()
+    endtime = datetime.now()
+    elapsed = endtime - starttime
+    print "Solution took " + str(elapsed)
 
-def solve_courses(model, courses):
-    solver = model.load('Mistral')
-    solver.solve()
-    print_courses([courses[i] for i in range(len(courses)) if courses[i] > 0])
+    print scheduled
     
 def print_courses(courses):
     for i in range(len(courses)):
         print "Course %d: %d" %(i, courses[i])
 
-#main begins execution here
 
-#variable initialization, to be done elsewhere someday
-major = "ICS"
-course_data = build_course_data(major)  #course data goes here, this is a list of Course objects
-N = len(course_data)
-prereqs = []
-max_terms = 15
-min_units = 90
-
-#build model and solve
-model = model_courses(N, max_terms, min_units, prereqs)
-solve_courses(model, course_data)
-   
-#def model_queens(N):
-#    queens = [Variable(N) for i in range(N)]
-#    model  = Model( 
-#        AllDiff( queens ),
-#        AllDiff( [queens[i] + i for i in range(N)] ),
-#        AllDiff( [queens[i] - i for i in range(N)] ) 
-#        )
-#    return (queens,model)
-
-#def solve_queens(param):
-#    (queens,model) = model_queens(param['N'])
-#    solver = model.load(param['solver'])
-#    solver.solve()
-#    print_chessboard(queens)
-#    print 'Nodes:', solver.getNodes(), ' Time:', solver.getTime()
-
-#def print_chessboard(queens):
-#    separator = '+---'*len(queens)+'+'
-#    for queen in queens:
-#        print separator
-#        print '|   '*queen.get_value()+'| Q |'+'   |'*(len(queens)-1-queen.get_value())
-#    print separator
-
-#solve_queens(input({'solver':'Mistral', 'N':10}))
+model_courses('ics')
