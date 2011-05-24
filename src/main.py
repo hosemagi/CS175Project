@@ -54,6 +54,7 @@ def model_courses(majorName):
     for term in range(max_terms):
         # add constraint for each term that "course_load_limit" not exceeded
         model.add([ sum((scheduled[course_c] == term) for course_c in range(total_classes))<=term_course_load_limit ])
+        print "Sum of scheduled[i] == " + str(term) + " for i in range " + str(total_classes) + " <= " + str(term_course_load_limit)
         
     # TODO #
     # add prereqs contraint

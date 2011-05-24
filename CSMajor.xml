@@ -1,670 +1,671 @@
 <major_requirements>
 
-<major_title>CS</major_title>
-<min_units>180</min_units>
-
-<groups>
-
-<course_group>
-<title>CS Lower Division</title>
-<num_courses_required>5</num_courses_required>
-<courses>
-<course>
-<title>Intro to Computer Science I</title>
-<code>ICS21</code>
-<units>6</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-</prereqs>
-</course>
-
-<course>
-<title>Intro to Computer Science II</title>
-<code>ICS22</code>
-<units>6</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS21</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Fundamental Data Structures</title>
-<code>ICS23</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS22</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Intro to Computer Organization</title>
-<code>ICS51</code>
-<units>6</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS6B</course_code>
-<course_code>ICS21</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Intro to Software Engineering</title>
-<code>ICS52</code>
-<units>6</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS23</course_code>
-</prereqs>
-</course>
-</courses>
-</course_group>
-
-<course_group>
-<title>CS Lower Division Math</title>
-<num_courses_required>7</num_courses_required>
-<courses>
-
-<course>
-<title>Calculus</title>
-<code>MATH2A</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-</prereqs>
-</course>
-
-<course>
-<title>Calculus</title>
-<code>MATH2B</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>MATH2A</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Boolean Algebra and Symbolic Logic</title>
-<code>ICS6B</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-</prereqs>
-</course>
-
-<course>
-<title>Discrete Math for CS</title>
-<code>ICS6D</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-</prereqs>
-</course>
-
-<course>
-<title>Linear Algebra</title>
-<code>MATH6G</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-</prereqs>
-</course>
-
-<course>
-<title>Symbolic Logic</title>
-<code>PHIL29</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-</prereqs>
-</course>
-
-
-
-<course>
-<title>Intro to Prob and Stats for CS</title>
-<code>MATH67</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>MATH2B</course_code>
-<course_code>ICS6D</course_code>
-</prereqs>
-</course>
-</courses>
-</course_group>
-
-<course group>
-<title> CS lower Division Science Core  </title>
-<num_courses_required>3</num_courses_required>
-<courses>
-
-<course>
-<title>Basic Physics I</title>
-<code>Physics3A</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>MATH2A</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Basic Physics II</title>
-<code>Physics3B</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>Physics3A</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Basic Physics III</title>
-<code>Physics3C</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>Physics3B</course_code>
-</prereqs>
-</course>
-
-</courses>
-</coursegroup>
-
-
-
-
-
-
-
-
-
-
-
-<course_group>
-<title>CS Upper Division Core I</title>
-<num_courses_required>8</num_courses_required>
-<courses>
-
-<course>
-<title>Computer Networks</title>
-<code>CS132</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS23</course_code>
-<course_code>ICS51</course_code>
-<course_code>MATH6B</course_code>
-<course_code>MATH6D</course_code>
-<course_code>MATH67</course_code>
-</prereqs>
-</course>
-
-
-
-
-
-
-
-<course>
-<title>Concepts in Programming Languages</title>
-<code>CS141</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS51</course_code>
-<course_code>ICS23</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Compilers and Interpreters</title>
-<code>CS142A</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS141</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Principles of Operating Systems</title>
-<code>CS143A</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS51</course_code>
-<course_code>ICS23</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Design and Analysis of Algorithms</title>
-<code>CS161</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS23</course_code>
-<course_code>ICS51</course_code>
-<course_code>ICS6D</course_code>
-<course_code>ICS6B</course_code>
-<course_code>MATH2B</course_code>
-<course_code>MATH6G</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Intro to Artificial Intelligence</title>
-<code>CS171</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS23</course_code>
-<course_code>MATH2A</course_code>
-<course_code>MATH2B</course_code>
-<course_code>MATH67</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Digital Logic Design</title>
-<code>CS151</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS51</course_code>
-<course_code>MATH6B</course_code>
-<course_code>MATH6D</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Computer Systems Architecture</title>
-<code>CS152</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS151</course_code>
-</prereqs>
-</course>
-</courses>
-</course_group>
-
-
-
-<course_group>
-<title>CS UPPER DIVISION CORE II</title>
-<num_courses_required>1</num_courses_required>
-<courses>
-
-<course>
-<title>Formal Language & Automata</title>
-<code>CS162</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS51</course_code>
-<course_code>MATH6B</course_code>
-<course_code>MATH6D</course_code>
-<course_code>MATH6G</course_code>
-<course_code>MATH67</course_code>
-<course_code>MATH2B</course_code>
-<course_code>ICS23</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Graph Algorithms</title>
-<code>CS163</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS161</course_code>
-
-</prereqs>
-</course>
-
-<course>
-<title>Computational Geography</title>
-<code>CS164</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS23</course_code>
-
-</prereqs>
-</course>
-
-<course>
-<title>Applied Cryptography</title>
-<code>CS167</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS22</course_code>
-<course_code>MATH6D</course_code>
-<course_code>CS161</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Intro to Optimization</title>
-<code>CS169</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS22</course_code>
-<course_code>MATH6D</course_code>
-<course_code>CS161</course_code>
-</prereqs>
-</course>
-
-</courses>
-</course_group>
-
-
-<course_group>
-<title>CS Project Course Requirement</title>
-<num_courses_required>3</num_courses_required>
-<courses>
-
-<course>
-<title>Computer Game Development</title>
-<code>CS113</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS171</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Advanced Graphics </title>
-<code>CS114</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS112</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Proj Data & Web Apps</title>
-<code>CS122b</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS122a</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Advanced Computer Networks</title>
-<code>CS133</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS132</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Language Proccesor Construction</title>
-<code>CS142B</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS142a</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Project in Operating Systems</title>
-<code>CS143B</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS143A</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Digital Logic Design Lab</title>
-<code>CS153</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS151</course_code>
-</prereqs>
-</course>
-
-
-
-<course>
-<title>Computer Design Lab</title>
-<code>CS154</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS151</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Project in Algorithums & Data Structures </title>
-<code>CS165</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS161</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Project in Artificial Intelligence </title>
-<code>CS175</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS171</course_code>
-</prereqs>
-</course>
-
-
-<course_group>
-<title>Computer Science  Electives</title>
-<num_courses_required>2</num_courses_required>
-<courses>
-
-<course>
-<title> Graphics </title>
-<code>CS112</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS22</course_code>
-</prereqs>
-</course>
-
-<course>
-<title> Data Management</title>
-<code>CS122A</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS22</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Software Testing and QA</title>
-<code>IN4MATX115</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS6B</course_code>
-<course_code>ICS52</course_code>
-</prereqs>
-</course>
-
-
-
-<course>
-<title>Software Architectures</title>
-<code>IN4MATX123</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>CS141</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Social Analysis of Computerization</title>
-<code>IN4MATX161</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>WR1</course_code>
-<course_code>ICS21</course_code>
-</prereqs>
-</course>
-
-<course>
-<title>Human Computer Interaction</title>
-<code>IN4MATX131</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS21</course_code>
-</prereqs>
-</course>
-
-
-
-
-<course>
-<title>Computer and Network Security</title>
-<code>CS134</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>ICS6D</course_code>
-<course_code>ICS22</course_code>
-<course_code>CS143A</course_code>
-</prereqs>
-</course>
-
-
-
-<course>
-<title>Project in Social Impact of Computing</title>
-<code>IN4MATX163</code>
-<units>4</units>
-<offerings>
-<term_id></term_id>
-</offerings>
-<prereqs>
-<course_code>IN4MATX131</course_code>
-</prereqs>
-</course>
-
-
-
-</courses>
-</course_group>
-</groups>
+	<major_title>CS</major_title>
+	<min_units>180</min_units>
+
+	<groups>
+
+		<course_group>
+			<title>CS Lower Division</title>
+			<num_courses_required>5</num_courses_required>
+			<courses>
+				<course>
+					<title>Intro to Computer Science I</title>
+					<code>ICS21</code>
+					<units>6</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Intro to Computer Science II</title>
+					<code>ICS22</code>
+					<units>6</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS21</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Fundamental Data Structures</title>
+					<code>ICS23</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS22</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Intro to Computer Organization</title>
+					<code>ICS51</code>
+					<units>6</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS6B</course_code>
+						<course_code>ICS21</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Intro to Software Engineering</title>
+					<code>ICS52</code>
+					<units>6</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS23</course_code>
+					</prereqs>
+				</course>
+			</courses>
+		</course_group>
+
+		<course_group>
+			<title>CS Lower Division Math</title>
+			<num_courses_required>7</num_courses_required>
+			<courses>
+
+				<course>
+					<title>Calculus</title>
+					<code>MATH2A</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Calculus</title>
+					<code>MATH2B</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>MATH2A</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Boolean Algebra and Symbolic Logic</title>
+					<code>ICS6B</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Discrete Math for CS</title>
+					<code>ICS6D</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Linear Algebra</title>
+					<code>MATH6G</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Symbolic Logic</title>
+					<code>PHIL29</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+					</prereqs>
+				</course>
+
+
+
+				<course>
+					<title>Intro to Prob and Stats for CS</title>
+					<code>MATH67</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>MATH2B</course_code>
+						<course_code>ICS6D</course_code>
+					</prereqs>
+				</course>
+			</courses>
+		</course_group>
+
+		<course_group>
+			<title> CS lower Division Science Core  </title>
+			<num_courses_required>3</num_courses_required>
+			<courses>
+
+				<course>
+					<title>Basic Physics I</title>
+					<code>Physics3A</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>MATH2A</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Basic Physics II</title>
+					<code>Physics3B</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>Physics3A</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Basic Physics III</title>
+					<code>Physics3C</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>Physics3B</course_code>
+					</prereqs>
+				</course>
+
+			</courses>
+		</course_group>
+
+
+
+
+
+
+
+
+
+
+
+		<course_group>
+			<title>CS Upper Division Core I</title>
+			<num_courses_required>8</num_courses_required>
+			<courses>
+
+				<course>
+					<title>Computer Networks</title>
+					<code>CS132</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS23</course_code>
+						<course_code>ICS51</course_code>
+						<course_code>MATH6B</course_code>
+						<course_code>MATH6D</course_code>
+						<course_code>MATH67</course_code>
+					</prereqs>
+				</course>
+
+
+
+
+
+
+
+				<course>
+					<title>Concepts in Programming Languages</title>
+					<code>CS141</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS51</course_code>
+						<course_code>ICS23</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Compilers and Interpreters</title>
+					<code>CS142A</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS141</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Principles of Operating Systems</title>
+					<code>CS143A</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS51</course_code>
+						<course_code>ICS23</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Design and Analysis of Algorithms</title>
+					<code>CS161</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS23</course_code>
+						<course_code>ICS51</course_code>
+						<course_code>ICS6D</course_code>
+						<course_code>ICS6B</course_code>
+						<course_code>MATH2B</course_code>
+						<course_code>MATH6G</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Intro to Artificial Intelligence</title>
+					<code>CS171</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS23</course_code>
+						<course_code>MATH2A</course_code>
+						<course_code>MATH2B</course_code>
+						<course_code>MATH67</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Digital Logic Design</title>
+					<code>CS151</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS51</course_code>
+						<course_code>MATH6B</course_code>
+						<course_code>MATH6D</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Computer Systems Architecture</title>
+					<code>CS152</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS151</course_code>
+					</prereqs>
+				</course>
+			</courses>
+		</course_group>
+
+
+
+		<course_group>
+			<title>CS UPPER DIVISION CORE II</title>
+			<num_courses_required>1</num_courses_required>
+			<courses>
+
+				<course>
+					<title>Formal Language and Automata</title>
+					<code>CS162</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS51</course_code>
+						<course_code>MATH6B</course_code>
+						<course_code>MATH6D</course_code>
+						<course_code>MATH6G</course_code>
+						<course_code>MATH67</course_code>
+						<course_code>MATH2B</course_code>
+						<course_code>ICS23</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Graph Algorithms</title>
+					<code>CS163</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS161</course_code>
+
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Computational Geography</title>
+					<code>CS164</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS23</course_code>
+
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Applied Cryptography</title>
+					<code>CS167</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS22</course_code>
+						<course_code>MATH6D</course_code>
+						<course_code>CS161</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Intro to Optimization</title>
+					<code>CS169</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS22</course_code>
+						<course_code>MATH6D</course_code>
+						<course_code>CS161</course_code>
+					</prereqs>
+				</course>
+
+			</courses>
+		</course_group>
+
+
+		<course_group>
+			<title>CS Project Course Requirement</title>
+			<num_courses_required>3</num_courses_required>
+			<courses>
+
+				<course>
+					<title>Computer Game Development</title>
+					<code>CS113</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS171</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Advanced Graphics </title>
+					<code>CS114</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS112</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Proj Data and Web Apps</title>
+					<code>CS122b</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS122a</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Advanced Computer Networks</title>
+					<code>CS133</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS132</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Language Proccesor Construction</title>
+					<code>CS142B</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS142a</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Project in Operating Systems</title>
+					<code>CS143B</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS143A</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Digital Logic Design Lab</title>
+					<code>CS153</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS151</course_code>
+					</prereqs>
+				</course>
+
+
+
+				<course>
+					<title>Computer Design Lab</title>
+					<code>CS154</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS151</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Project in Algorithums and Data Structures </title>
+					<code>CS165</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS161</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Project in Artificial Intelligence </title>
+					<code>CS175</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS171</course_code>
+					</prereqs>
+				</course>
+			</courses>
+		</course_group>
+
+		<course_group>
+			<title>Computer Science Electives</title>
+			<num_courses_required>2</num_courses_required>
+			<courses>
+
+				<course>
+					<title> Graphics </title>
+					<code>CS112</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS22</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title> Data Management</title>
+					<code>CS122A</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS22</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Software Testing and QA</title>
+					<code>IN4MATX115</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS6B</course_code>
+						<course_code>ICS52</course_code>
+					</prereqs>
+				</course>
+
+
+
+				<course>
+					<title>Software Architectures</title>
+					<code>IN4MATX123</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS141</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Social Analysis of Computerization</title>
+					<code>IN4MATX161</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>WR1</course_code>
+						<course_code>ICS21</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Human Computer Interaction</title>
+					<code>IN4MATX131</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS21</course_code>
+					</prereqs>
+				</course>
+
+
+
+
+				<course>
+					<title>Computer and Network Security</title>
+					<code>CS134</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS6D</course_code>
+						<course_code>ICS22</course_code>
+						<course_code>CS143A</course_code>
+					</prereqs>
+				</course>
+
+
+
+				<course>
+					<title>Project in Social Impact of Computing</title>
+					<code>IN4MATX163</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>IN4MATX131</course_code>
+					</prereqs>
+				</course>
+
+
+
+			</courses>
+		</course_group>
+	</groups>
 </major_requirements>
