@@ -19,43 +19,33 @@ def model_courses(majorName):
     allCourses = newMajor.courses
     
     
-    max_terms = 15 #might need to change/implement differently
+    max_terms = 7 #might need to change/implement differently
     term_course_load_limit = 4
     total_classes = len(allCourses)
     print "Total # of classes: " + str(total_classes)
     scheduled = VarArray(total_classes, 0, max_terms)
     
-    model = Model()
+    courseGroupSolutions = []
     
-    # add constraint that all courses scheduled before max_terms
-    model.add([ scheduled[c] <= max_terms for c in scheduled ])
+    model = Model()
     
     for i in range(len(courseGroups)):
         courseGroup = courseGroups[i]
         numCoursesRequired = courseGroup.numCoursesRequired
         courses = courseGroup.courses
-        print str(courses)
         courseLength = len(courses)
-        print courseLength
         
         # initialize variable array for this group
         courseVariables = VarArray(len(courses), 0, max_terms)
-        
-        #current_scheduled_length = len(scheduled)
-        #for c in courses:
-        #    newClass = Variable(0, max_terms)
-        #    scheduled.append(newClass)
+        courseGroupSolutions.append(courseVariables)
             
-        #model.add([ sum((scheduled[course]>0) for course in range(len(courses)))>=numCoursesRequired ])
-        
         # add constraint for each courseGroup
-        model.add([ sum((courseVariables[course]>0) for course in range(len(courses)))>=int(numCoursesRequired) ])
+        model.add(sum((courseVariables[course]>0) for course in range(len(courses)))>=int(numCoursesRequired))
     
-    for term in range(max_terms):
-        # add constraint for each term that "course_load_limit" not exceeded
-        model.add([ sum((scheduled[course_c] == term) for course_c in range(total_classes))<=term_course_load_limit ])
-        print "Sum of scheduled[i] == " + str(term) + " for i in range " + str(total_classes) + " <= " + str(term_course_load_limit)
-        
+    # must not exceed unit limit for a single term
+    #for term in range(1, max_terms):
+    #     model.add( sum([[sum((courseGroupSolutions[i] == term) for i in range(len(courseVariables)))] for courseVariables in courseGroupSolutions ] ) < 4) 
+    
     # TODO #
     # add prereqs contraint
     # add minimum total units constraint
@@ -63,7 +53,7 @@ def model_courses(majorName):
     
     #return model;
     msolver = Mistral.Solver(model)
-    
+    print scheduled
     print "Solving..."
     starttime = datetime.now()
     msolver.solve()
@@ -71,11 +61,17 @@ def model_courses(majorName):
     elapsed = endtime - starttime
     print "Solution took " + str(elapsed)
 
-    print scheduled
-    
+    print "\n\nDISPLAYING COURSE SELECTION FOR MAJOR " + newMajor.title
+
+    for i in range(len(courseGroupSolutions)):
+        print "\n############################"
+        print "Classes for course group: " + newMajor.courseGroups[i].title
+        for j in range(len(courseGroupSolutions[i])):
+            print newMajor.courseGroups[i].courses[j].courseCode + ": " + str(courseGroupSolutions[i][j])
+        
 def print_courses(courses):
     for i in range(len(courses)):
         print "Course %d: %d" %(i, courses[i])
 
 
-model_courses('ics')
+model_courses('cs')
