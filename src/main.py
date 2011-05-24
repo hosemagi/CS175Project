@@ -41,8 +41,15 @@ def model_courses(majorName):
         # initialize variable array for this group
         courseVariables = VarArray(len(courses), 0, max_terms)
         
+        #current_scheduled_length = len(scheduled)
+        #for c in courses:
+        #    newClass = Variable(0, max_terms)
+        #    scheduled.append(newClass)
+            
+        #model.add([ sum((scheduled[course]>0) for course in range(len(courses)))>=numCoursesRequired ])
+        
         # add constraint for each courseGroup
-        model.add([ sum((courseVariables[course]>0) for course in range(len(courses)))>=numCoursesRequired ])
+        model.add([ sum((courseVariables[course]>0) for course in range(len(courses)))>=int(numCoursesRequired) ])
     
     for term in range(max_terms):
         # add constraint for each term that "course_load_limit" not exceeded
@@ -58,7 +65,7 @@ def model_courses(majorName):
     
     print "Solving..."
     starttime = datetime.now()
-    #msolver.solve()
+    msolver.solve()
     endtime = datetime.now()
     elapsed = endtime - starttime
     print "Solution took " + str(elapsed)
