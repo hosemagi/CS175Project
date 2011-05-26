@@ -33,14 +33,21 @@ def model_courses(majorName):
         courseGroup = courseGroups[i]
         numCoursesRequired = courseGroup.numCoursesRequired
         courses = courseGroup.courses
-        courseLength = len(courses)
         
         # initialize variable array for this group
-        courseVariables = VarArray(len(courses), 0, max_terms)
+        courseVariables = dict()
+        courseCodes = []
         courseGroupSolutions.append(courseVariables)
-            
+        
+        for j in courses:
+            courseVariables[j.courseCode] = Variable(0, max_terms)
+            courseCodes.append(j.courseCode)
+            prereqs = j.prereqs
+            #for k in prereqs
+        
         # add constraint for each courseGroup
-        model.add(sum((courseVariables[course]>0) for course in range(len(courses)))>=int(numCoursesRequired))
+        #model.add(sum((courseVariables[course]>0) for course in range(len(courses)))>=int(numCoursesRequired))    
+        model.add([ sum((courseVariables[code]>0) for code in courseCodes)>=int(numCoursesRequired) ])
     
     # must not exceed unit limit for a single term
     #for term in range(1, max_terms):
@@ -66,12 +73,12 @@ def model_courses(majorName):
     for i in range(len(courseGroupSolutions)):
         print "\n############################"
         print "Classes for course group: " + newMajor.courseGroups[i].title
-        for j in range(len(courseGroupSolutions[i])):
-            print newMajor.courseGroups[i].courses[j].courseCode + ": " + str(courseGroupSolutions[i][j])
+        for k, j in courseGroupSolutions[i].items():
+            print str(k) + ": " + str(j)
         
 def print_courses(courses):
     for i in range(len(courses)):
         print "Course %d: %d" %(i, courses[i])
 
 
-model_courses('cs')
+model_courses('ics')
