@@ -9,69 +9,133 @@ import Mistral
 import DataStructures
 
 # creates and solves a model for a given major
-def model_courses(majorName):
-    newMajor = DataStructures.Major.getMajor(majorName)
-    majorTitle = newMajor.title
-    print "Major: " + majorTitle
-    minUnits = newMajor.minUnits
-    print "Minimum units: " + str(minUnits)
-    courseGroups = newMajor.courseGroups
-    allCourses = newMajor.courses
+def generateSchedule(majorName):
+    major = DataStructures.Major.getMajor(majorName)
+    print "Major: " + major.title
+    print "Minimum units: " + str(major.minUnits)
+    print "Total # of classes: " + str(len(major.courses))
+
+    # Maximum unit load per term
+    # @TODO: change term unit load constraint to use this variable
+    max_term_units = 16
     
+    # A Numberjack array of Variables
+    #    - the index of an element in the array represents a course (as its index in major.courses)
+    #    - the value of element 'i' in the array is an int representing the term course 'i' was scheduled for
+    courseTerms = VarArray(len(major.courses), 0, len(major.courses))
     
-    max_terms = 7 #might need to change/implement differently
-    term_course_load_limit = 4
-    total_classes = len(allCourses)
-    print "Total # of classes: " + str(total_classes)
-    scheduled = VarArray(total_classes, 0, max_terms)
+    # Z is a Numberjack Variable that represents the maximum number of terms
+    # Ultimate goal is to produce solutions that minimize Z 
+    Z = Variable(1, len(major.courses))
     
-    courseGroupSolutions = []
-    
+    # declare the Numberjack Constraint Model
     model = Model()
     
-    for i in range(len(courseGroups)):
-        courseGroup = courseGroups[i]
-        numCoursesRequired = courseGroup.numCoursesRequired
-        courses = courseGroup.courses
-        courseLength = len(courses)
+    # SEE page 14 fig. 4 of paper for mathematical constraints:
+    #     http://www.csun.edu/~vcmgt0j3/Publications/CP05%20Paper.pdf
+    
+    # OBJECTIVE FUNCTION: minimize Z
+    # @TODO: currently this makes the solver take forever to run, investigate!
+    # for i in range(len(courseTerms)):
+    #    model.add(courseTerms[i] <= Z)
+    # model.add(Minimize(Z))
+    
+    # CONSTRAINT: REQUIREMENTS MET FOR EACH COURSE GROUP
+    # for each course group
+    for i in range(len(major.courseGroups)):
+        # get an easy reference to the current courseGroup
+        courseGroup = major.courseGroups[i]
         
-        # initialize variable array for this group
-        courseVariables = VarArray(len(courses), 0, max_terms)
-        courseGroupSolutions.append(courseVariables)
+        # get the start and end indices of this course group in the master 'courses' array
+        startIndex = courseGroup.startIndex
+        endIndex = startIndex + len(courseGroup.courses)
+        
+        # add a constraint for this course group
+        # the sum of all of the taken courses in this group must be
+        #    at least the minimum number required from this group
+        # course[i] taken is defined by courseTerms[i] > 0
+        model.add(sum([courseTerms[k] > 0 for k in range(startIndex, endIndex)]) >= int(courseGroup.numCoursesRequired))
+        
+    # CONSTRAINT: PREREQUISITE REQUIREMENTS ARE SATISFIED FOR SELECTED COURSES
+    # for each course in the full list of courses
+    for i in range(len(courseTerms)):
+        # get an easy reference for the current course
+        course = major.courses[i]
+    
+        # get an easy reference for the prerequisites for the current course
+        prereqs = course.prereqs
+        
+        # for each prerequisite (String course code of prereq course)
+        for prereq in prereqs:
+            # get the index of the prerequisite course in the master course array
+            prereqIndex = major.getCourseIndex(prereq)
             
-        # add constraint for each courseGroup
-        model.add(sum((courseVariables[course]>0) for course in range(len(courses)))>=int(numCoursesRequired))
+            # make sure prerequisite constraint is satisfied:
+            #    (1) course is taken AND the current prerequisite is satisfied
+            #    (2) OR course was not taken (therefore prereqs don't have to be)
+            #    NOTE: & and | logical operators are required for numberjack
+            #         'and' and 'or' won't work... we had lots of early bugs from this
+            model.add((courseTerms[i] > 0) & (courseTerms[prereqIndex] < courseTerms[i]) | (courseTerms[i] == 0))
     
-    # must not exceed unit limit for a single term
-    #for term in range(1, max_terms):
-    #     model.add( sum([[sum((courseGroupSolutions[i] == term) for i in range(len(courseVariables)))] for courseVariables in courseGroupSolutions ] ) < 4) 
+    # CONSTRAINT: MAX UNIT LOAD IS ENFORCED FOR EACH TERM
+    # for each possible term
+    for term in range(1, len(courseTerms)):
+        # the sum of courses scheduled for the current term must be <= the max allowed in a single term
+        # 'i' represents the index of the course in the master course array
+        # 'courseTerms[i]' is the term course i is scheduled for
+        # 'term' is the current term we are adding the constraint for 
+        model.add(sum([(courseTerms[i] == term) for i in range(len(courseTerms))]) <= 4 )
     
-    # TODO #
-    # add prereqs contraint
-    # add minimum total units constraint
-    # add "course offering" constraints
     
-    #return model;
-    msolver = Mistral.Solver(model)
-    print scheduled
+    #@TODO: Constraints to be added:
+    # "course offering" constraints
+    # min units for major constraint
+    
+    # Solve the Model
+    msolver = model.load('Mistral', courseTerms)
     print "Solving..."
     starttime = datetime.now()
     msolver.solve()
     endtime = datetime.now()
     elapsed = endtime - starttime
     print "Solution took " + str(elapsed)
-
-    print "\n\nDISPLAYING COURSE SELECTION FOR MAJOR " + newMajor.title
-
-    for i in range(len(courseGroupSolutions)):
-        print "\n############################"
-        print "Classes for course group: " + newMajor.courseGroups[i].title
-        for j in range(len(courseGroupSolutions[i])):
-            print newMajor.courseGroups[i].courses[j].courseCode + ": " + str(courseGroupSolutions[i][j])
-        
-def print_courses(courses):
-    for i in range(len(courses)):
-        print "Course %d: %d" %(i, courses[i])
+     
+    # print final solution
+    #@TODO: this will eventually be formatted output for the php ui script to read       
+    printSchedule(major, courseTerms, msolver)
 
 
-model_courses('cs')
+
+
+# printSchedule is a convenient method for outputting the results of the solver        
+def printSchedule(major, courseTerms, solver):
+    print "\n\n\n\n#########################################################"
+    print "####        PROPOSED SCHEDULE                        ####"
+    print "#########################################################"
+    max_term = max([courseTerms[i].get_value(solver) for i in range(len(courseTerms))])
+    for i in range(1, max_term):
+        print "\nTerm " + str(i) + ": "
+        coursesForTerm = [str(major.courses[j].courseCode) for j in range(len(courseTerms)) if (courseTerms[j].get_value(solver) == i)]
+        print coursesForTerm
+
+
+# Generate a proposed schedule for ICS Major
+generateSchedule('ics')
+
+
+
+
+
+
+
+# DONT LOOK HERE -- THIS IS WHERE CODE GOES TO DIE
+
+    #print "\n\nDISPLAYING COURSE SELECTION FOR MAJOR " + major.title
+    #for i in range(len(major.courseGroups)):
+    #    print "\n############################"
+    #    courseGroup = major.courseGroups[i]
+    #    print "Classes for course group: " + courseGroup.title
+    #    startIndex = courseGroup.startIndex
+    #    endIndex = startIndex + len(courseGroup.courses)
+    #    for j in range(len(courseGroup.courses)):
+    #        print courseGroup.courses[j].courseCode + ": " + str(courseTerms[startIndex + j].get_value(msolver))

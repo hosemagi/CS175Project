@@ -229,8 +229,8 @@
 					<prereqs>
 						<course_code>ICS23</course_code>
 						<course_code>ICS51</course_code>
-						<course_code>MATH6B</course_code>
-						<course_code>MATH6D</course_code>
+						<course_code>ICS6B</course_code>
+						<course_code>ICS6D</course_code>
 						<course_code>MATH67</course_code>
 					</prereqs>
 				</course>
@@ -320,8 +320,8 @@
 					</offerings>
 					<prereqs>
 						<course_code>ICS51</course_code>
-						<course_code>MATH6B</course_code>
-						<course_code>MATH6D</course_code>
+						<course_code>ICS6B</course_code>
+						<course_code>ICS6D</course_code>
 					</prereqs>
 				</course>
 
@@ -355,8 +355,8 @@
 					</offerings>
 					<prereqs>
 						<course_code>ICS51</course_code>
-						<course_code>MATH6B</course_code>
-						<course_code>MATH6D</course_code>
+						<course_code>ICS6B</course_code>
+						<course_code>ICS6D</course_code>
 						<course_code>MATH6G</course_code>
 						<course_code>MATH67</course_code>
 						<course_code>MATH2B</course_code>
@@ -399,7 +399,7 @@
 					</offerings>
 					<prereqs>
 						<course_code>ICS22</course_code>
-						<course_code>MATH6D</course_code>
+						<course_code>ICS6D</course_code>
 						<course_code>CS161</course_code>
 					</prereqs>
 				</course>
@@ -413,7 +413,7 @@
 					</offerings>
 					<prereqs>
 						<course_code>ICS22</course_code>
-						<course_code>MATH6D</course_code>
+						<course_code>ICS6D</course_code>
 						<course_code>CS161</course_code>
 					</prereqs>
 				</course>
@@ -453,13 +453,13 @@
 
 				<course>
 					<title>Proj Data and Web Apps</title>
-					<code>CS122b</code>
+					<code>CS122B</code>
 					<units>4</units>
 					<offerings>
 						<term_id></term_id>
 					</offerings>
 					<prereqs>
-						<course_code>CS122a</course_code>
+						<course_code>CS122A</course_code>
 					</prereqs>
 				</course>
 
@@ -483,7 +483,7 @@
 						<term_id></term_id>
 					</offerings>
 					<prereqs>
-						<course_code>CS142a</course_code>
+						<course_code>CS142A</course_code>
 					</prereqs>
 				</course>
 
@@ -615,7 +615,6 @@
 						<term_id></term_id>
 					</offerings>
 					<prereqs>
-						<course_code>WR1</course_code>
 						<course_code>ICS21</course_code>
 					</prereqs>
 				</course>
@@ -667,5 +666,25 @@
 
 			</courses>
 		</course_group>
+		<course_group>
+			<title>Electives</title>
+			<num_courses_required>0</num_courses_required>
+			<courses>
+				
+				<course>
+					<title>Intro to Data Management</title>
+					<code>CS122A</code>
+					<units>4</units>
+					<offerings>
+						<term_id></term_id>
+					</offerings>
+					<prereqs>
+						<course_code>IN4MATX131</course_code>
+					</prereqs>
+				</course>
+				
+			</courses>
+		</course_group>
+		
 	</groups>
 </major_requirements>

@@ -170,7 +170,6 @@
 				<term_id></term_id>
 			</offerings>
 			<prereqs>
-				<course_code>WR1</course_code>
 				<course_code>ICS21</course_code>
 			</prereqs>
 		</course>
@@ -493,20 +492,31 @@
 				<course_code>CS171</course_code>
 			</prereqs>
 		</course>
-		
+	
+	</courses>
+</course_group>
+
+<course_group>
+	<title>Electives</title>
+	<num_courses_required>0</num_courses_required>
+	<courses>
 		<course>
-			<title>Language Proc Construction</title>
-			<code>CS142B</code>
+			<title>Computer Networks</title>
+			<code>CS132</code>
 			<units>4</units>
 			<offerings>
 				<term_id></term_id>
 			</offerings>
 			<prereqs>
-				<course_code>CS142</course_code>
+				<course_code>ICS23</course_code>
+				<course_code>ICS51</course_code>
+				<course_code>ICS6B</course_code>
+				<course_code>ICS6D</course_code>
+				<course_code>MATH67</course_code>
 			</prereqs>
 		</course>
-	
 	</courses>
 </course_group>
+
 </groups>
 </major_requirements>

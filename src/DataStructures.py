@@ -55,6 +55,7 @@ class Course:
         self.courseCode = ""
         self.offerings = []
         self.title = ""
+        self.index = -1
         
 class CourseGroup:
     """Defines a requirement group for a major, created by a Major object"""
@@ -64,6 +65,7 @@ class CourseGroup:
         self.title = ""
         self.numCoursesRequired = 0
         self.courses = []
+        self.startIndex = 0
 
 class Major:
     """Class for holding information for a given major, initialized with XML file"""
@@ -72,14 +74,19 @@ class Major:
         print "Initializing major..."
         self.title = ""
         self.minUnits = []
-        self.courses = dict()
+        self.courseDict = dict()
+        self.courses = []
         self.courseGroups = []
         
     def getCourse(self, courseCode):
-        return self.courses[courseCode]
+        return self.courseDict[courseCode]
+    
+    def getCourseIndex(self, courseCode):
+        return self.courses.index(self.courseDict[courseCode])
         
     @staticmethod
     def getMajor(majorName):
+        foundDuplicate = False
         major = Major()
         if(majorName.lower() == "ics"):
             print "Loading XML File ICSMajor.xml"
@@ -100,6 +107,7 @@ class Major:
         print "Min units: " + major.minUnits
         print "Parsing "+str(len(courseGroupNodes))+" required course groups..."
         
+        index = 0
         for node in courseGroupNodes:
             print ""
             courseGroup = CourseGroup()
@@ -111,6 +119,8 @@ class Major:
             courseGroup.title = courseGroupTitleNode[0].firstChild.nodeValue
             courseGroup.numCoursesRequired = courseGroupNumRequiredNode[0].firstChild.nodeValue
             major.courseGroups.append(courseGroup)
+            
+            courseGroup.startIndex = index
             
             print "Course Group: " + courseGroup.title
             print "Minimum Required: " + courseGroup.numCoursesRequired
@@ -128,6 +138,8 @@ class Major:
                 course.title = courseTitleNode[0].firstChild.nodeValue
                 course.units = courseUnitNode[0].firstChild.nodeValue
                 course.courseCode = courseCodeNode[0].firstChild.nodeValue
+                course.index = index
+                index += 1
                 
                 for courseCodeNode in coursePrereqsNodes:
                     course.prereqs.append(courseCodeNode.firstChild.nodeValue)
@@ -137,16 +149,23 @@ class Major:
                 print "Units: " + course.units
                 print "Prereqs: " + str(course.prereqs)
                 
+                major.courses.append(course)
                 courseGroup.courses.append(course)
                 
-                major.courses[course.courseCode] = course
+                if(major.courseDict.has_key(course.courseCode)):
+                    print "DUPLICATE: " + course.courseCode
+                    foundDuplicate = True
+                major.courseDict[course.courseCode] = course
                     
-            print "ALL COURSES IN MAJOR:"
-            for key in major.courses.keys():
-                print key + ": " + str(major.courses[key])
+        print "\n\nALL COURSES IN MAJOR:"
+        for i in range(len(major.courses)):
+            print major.courses[i].courseCode + ": " + str(i)
             
                     
         print "Successfully initialized major " + major.title
+        print str(len(major.courses)) + " courses"
+        if foundDuplicate:
+            print "Found at least one duplicated course, check output"
         return major
 
-Major.getMajor('cs')
+#Major.getMajor('ics')
