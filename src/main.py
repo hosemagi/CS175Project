@@ -127,7 +127,6 @@ generateSchedule('ics')
 
 
 
-
 # DONT LOOK HERE -- THIS IS WHERE CODE GOES TO DIE
 
     #print "\n\nDISPLAYING COURSE SELECTION FOR MAJOR " + major.title
