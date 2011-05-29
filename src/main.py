@@ -8,6 +8,12 @@ from Numberjack import *
 import Mistral
 import DataStructures
 
+def insert(original, new, pos):
+    '''Inserts new inside original at pos.'''
+    return original[:pos] + new + original[pos:]
+
+
+
 # creates and solves a model for a given major
 def generateSchedule(majorName):
     major = DataStructures.Major.getMajor(majorName)
@@ -23,6 +29,7 @@ def generateSchedule(majorName):
     #    - the index of an element in the array represents a course (as its index in major.courses)
     #    - the value of element 'i' in the array is an int representing the term course 'i' was scheduled for
     courseTerms = VarArray(len(major.courses), 0, len(major.courses))
+    masterCourseTerms = range(1, len(major.courses))
     
     # Z is a Numberjack Variable that represents the maximum number of terms
     # Ultimate goal is to produce solutions that minimize Z 
@@ -64,6 +71,22 @@ def generateSchedule(majorName):
     
         # get an easy reference for the prerequisites for the current course
         prereqs = course.prereqs
+        offerings = course.offerings
+        invalidTerms = []
+        for j in masterCourseTerms:
+            if j not in offerings:
+                invalidTerms.append(j)
+        for k in invalidTerms:
+            model.add(courseTerms[i] != k)
+        #list = ''
+        #for j in offerings:
+        #    list += ('(courseTerms[i] = ' + str(j) + ') | ')
+        #list = list[:-3]
+        #begin = 'model.add('
+        #list = begin + list
+        #list += ')'
+        #print course.courseCode + ': ' + list
+        
         
         # for each prerequisite (String course code of prereq course)
         for prereq in prereqs:
@@ -75,7 +98,7 @@ def generateSchedule(majorName):
             #    (2) OR course was not taken (therefore prereqs don't have to be)
             #    NOTE: & and | logical operators are required for numberjack
             #         'and' and 'or' won't work... we had lots of early bugs from this
-            model.add((courseTerms[i] > 0) & (courseTerms[prereqIndex] < courseTerms[i]) | (courseTerms[i] == 0))
+            model.add((courseTerms[i] > 0) & (0 < courseTerms[prereqIndex] < courseTerms[i]) | (courseTerms[i] == 0))
     
     # CONSTRAINT: MAX UNIT LOAD IS ENFORCED FOR EACH TERM
     # for each possible term
@@ -106,24 +129,21 @@ def generateSchedule(majorName):
 
 
 
-
 # printSchedule is a convenient method for outputting the results of the solver        
 def printSchedule(major, courseTerms, solver):
     print "\n\n\n\n#########################################################"
     print "####        PROPOSED SCHEDULE                        ####"
     print "#########################################################"
     max_term = max([courseTerms[i].get_value(solver) for i in range(len(courseTerms))])
+    # added print for debugging
+    print max_term
     for i in range(1, max_term):
         print "\nTerm " + str(i) + ": "
         coursesForTerm = [str(major.courses[j].courseCode) for j in range(len(courseTerms)) if (courseTerms[j].get_value(solver) == i)]
         print coursesForTerm
 
-
 # Generate a proposed schedule for ICS Major
 generateSchedule('ics')
-
-
-
 
 
 

@@ -13,7 +13,27 @@
 			<code>ICS21</code>
 			<units>6</units>
 			<offerings>
-				<term_id></term_id>
+				<term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
+        
 			</offerings>
 			<prereqs>
 			</prereqs>
@@ -24,7 +44,26 @@
 			<code>ICS22</code>
 			<units>6</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS21</course_code>
@@ -36,7 +75,26 @@
 			<code>ICS23</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS22</course_code>
@@ -48,7 +106,26 @@
 			<code>ICS51</code>
 			<units>6</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS6B</course_code>
@@ -61,7 +138,26 @@
 			<code>ICS52</code>
 			<units>6</units>
 			<offerings>
-				<term_id></term_id>
+        
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+       
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS23</course_code>
@@ -79,7 +175,28 @@
 			<code>MATH2A</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+				<term_id>
+          <term_id>1</term_id>
+          <term_id>2</term_id>
+          <term_id>3</term_id>
+          <term_id>4</term_id>
+          <term_id>5</term_id>
+          <term_id>6</term_id>
+          <term_id>7</term_id>
+          <term_id>8</term_id>
+          <term_id>9</term_id>
+          <term_id>10</term_id>
+          <term_id>11</term_id>
+          <term_id>12</term_id>
+          <term_id>13</term_id>
+          <term_id>14</term_id>
+          <term_id>15</term_id>
+          <term_id>16</term_id>
+          <term_id>17</term_id>
+          <term_id>18</term_id>
+          <term_id>19</term_id>
+          <term_id>20</term_id>
+        </term_id>
 			</offerings>
 			<prereqs>
 			</prereqs>
@@ -90,7 +207,28 @@
 			<code>MATH2B</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+				<term_id>
+          <term_id>1</term_id>
+          <term_id>2</term_id>
+          <term_id>3</term_id>
+          <term_id>4</term_id>
+          <term_id>5</term_id>
+          <term_id>6</term_id>
+          <term_id>7</term_id>
+          <term_id>8</term_id>
+          <term_id>9</term_id>
+          <term_id>10</term_id>
+          <term_id>11</term_id>
+          <term_id>12</term_id>
+          <term_id>13</term_id>
+          <term_id>14</term_id>
+          <term_id>15</term_id>
+          <term_id>16</term_id>
+          <term_id>17</term_id>
+          <term_id>18</term_id>
+          <term_id>19</term_id>
+          <term_id>20</term_id>
+        </term_id>
 			</offerings>
 			<prereqs>
 				<course_code>MATH2A</course_code>
@@ -102,7 +240,26 @@
 			<code>ICS6B</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 			</prereqs>
@@ -113,7 +270,25 @@
 			<code>ICS6D</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 			</prereqs>
@@ -124,7 +299,26 @@
 			<code>MATH6G</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 			</prereqs>
@@ -135,7 +329,26 @@
 			<code>MATH67</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>MATH2B</course_code>
@@ -155,7 +368,26 @@
 			<code>IN4MATX111</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+       
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS52</course_code>
@@ -167,7 +399,26 @@
 			<code>IN4MATX161</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+
+        <term_id>3</term_id>
+       
+        <term_id>5</term_id>
+        
+        <term_id>7</term_id>
+        
+        <term_id>9</term_id>
+        
+        <term_id>11</term_id>
+       
+        <term_id>13</term_id>
+       
+        <term_id>15</term_id>
+        
+        <term_id>17</term_id>
+      
+        <term_id>19</term_id>
+        
 			</offerings>
 			<prereqs>
 				<course_code>ICS21</course_code>
@@ -179,7 +430,25 @@
 			<code>CS141</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS51</course_code>
@@ -192,7 +461,26 @@
 			<code>CS142A</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        
+        <term_id>3</term_id>
+        
+        <term_id>5</term_id>
+        
+        <term_id>7</term_id>
+        
+        <term_id>9</term_id>
+        
+        <term_id>11</term_id>
+       
+        <term_id>13</term_id>
+        
+        <term_id>15</term_id>
+        
+        <term_id>17</term_id>
+        
+        <term_id>19</term_id>
+        
 			</offerings>
 			<prereqs>
 				<course_code>CS141</course_code>
@@ -204,7 +492,25 @@
 			<code>CS143A</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS51</course_code>
@@ -217,7 +523,26 @@
 			<code>CS161</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS23</course_code>
@@ -234,7 +559,26 @@
 			<code>CS171</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        
+        <term_id>3</term_id>
+        
+        <term_id>5</term_id>
+      
+        <term_id>7</term_id>
+        
+        <term_id>9</term_id>
+       
+        <term_id>11</term_id>
+       
+        <term_id>13</term_id>
+       
+        <term_id>15</term_id>
+        
+        <term_id>17</term_id>
+        
+        <term_id>19</term_id>
+       
 			</offerings>
 			<prereqs>
 				<course_code>ICS23</course_code>
@@ -249,7 +593,26 @@
 			<code>CS151</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS51</course_code>
@@ -263,7 +626,26 @@
 			<code>CS152</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        
+        <term_id>2</term_id>
+        
+        <term_id>4</term_id>
+        
+        <term_id>6</term_id>
+        
+        <term_id>8</term_id>
+        
+        <term_id>10</term_id>
+        
+        <term_id>12</term_id>
+        
+        <term_id>14</term_id>
+        
+        <term_id>16</term_id>
+        
+        <term_id>18</term_id>
+        
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>CS151</course_code>
@@ -282,7 +664,28 @@
 			<code>IN4MATX115</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+				<term_id>
+          <term_id>1</term_id>
+          <term_id>2</term_id>
+
+          <term_id>4</term_id>
+          <term_id>5</term_id>
+
+          <term_id>7</term_id>
+          <term_id>8</term_id>
+
+          <term_id>10</term_id>
+          <term_id>11</term_id>
+
+          <term_id>13</term_id>
+          <term_id>14</term_id>
+
+          <term_id>16</term_id>
+          <term_id>17</term_id>
+
+          <term_id>19</term_id>
+          <term_id>20</term_id>
+        </term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS6B</course_code>
@@ -295,7 +698,28 @@
 			<code>IN4MATX123</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+				<term_id>
+          <term_id>1</term_id>
+          <term_id>2</term_id>
+
+          <term_id>4</term_id>
+          <term_id>5</term_id>
+
+          <term_id>7</term_id>
+          <term_id>8</term_id>
+
+          <term_id>10</term_id>
+          <term_id>11</term_id>
+
+          <term_id>13</term_id>
+          <term_id>14</term_id>
+
+          <term_id>16</term_id>
+          <term_id>17</term_id>
+
+          <term_id>19</term_id>
+          <term_id>20</term_id>
+        </term_id>
 			</offerings>
 			<prereqs>
 				<course_code>CS141</course_code>
@@ -307,7 +731,26 @@
 			<code>IN4MATX131</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS21</course_code>
@@ -326,7 +769,25 @@
 			<code>CS134</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+
+        <term_id>3</term_id>
+
+        <term_id>5</term_id>
+
+        <term_id>7</term_id>
+
+        <term_id>9</term_id>
+
+        <term_id>11</term_id>
+
+        <term_id>13</term_id>
+
+        <term_id>15</term_id>
+
+        <term_id>17</term_id>
+
+        <term_id>19</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS6D</course_code>
@@ -340,7 +801,25 @@
 			<code>CS162</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+
+        <term_id>3</term_id>
+
+        <term_id>5</term_id>
+
+        <term_id>7</term_id>
+
+        <term_id>9</term_id>
+
+        <term_id>11</term_id>
+
+        <term_id>13</term_id>
+
+        <term_id>15</term_id>
+
+        <term_id>17</term_id>
+
+        <term_id>19</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS51</course_code>
@@ -358,7 +837,25 @@
 			<code>CS163</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+
+        <term_id>3</term_id>
+
+        <term_id>5</term_id>
+
+        <term_id>7</term_id>
+
+        <term_id>9</term_id>
+
+        <term_id>11</term_id>
+
+        <term_id>13</term_id>
+
+        <term_id>15</term_id>
+
+        <term_id>17</term_id>
+
+        <term_id>19</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>CS161</course_code>
@@ -370,7 +867,20 @@
 			<code>CS164</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+       
+        <term_id>3</term_id>
+        
+        <term_id>6</term_id>
+        
+        <term_id>9</term_id>
+        
+        <term_id>12</term_id>
+        
+        <term_id>15</term_id>
+        
+        <term_id>18</term_id>
+        
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS23</course_code>
@@ -390,7 +900,25 @@
 			<code>IN4MATX132</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+
+        <term_id>3</term_id>
+
+        <term_id>5</term_id>
+
+        <term_id>7</term_id>
+
+        <term_id>9</term_id>
+
+        <term_id>11</term_id>
+
+        <term_id>13</term_id>
+
+        <term_id>15</term_id>
+
+        <term_id>17</term_id>
+
+        <term_id>19</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>IN4MATX131</course_code>
@@ -402,7 +930,25 @@
 			<code>IN4MATX117</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+
+        <term_id>3</term_id>
+
+        <term_id>5</term_id>
+
+        <term_id>7</term_id>
+
+        <term_id>9</term_id>
+
+        <term_id>11</term_id>
+
+        <term_id>13</term_id>
+
+        <term_id>15</term_id>
+
+        <term_id>17</term_id>
+
+        <term_id>19</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS52</course_code>
@@ -414,7 +960,26 @@
 			<code>IN4MATX163</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>IN4MATX131</course_code>
@@ -426,7 +991,26 @@
 			<code>CS142B</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+       
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>CS142A</course_code>
@@ -438,7 +1022,26 @@
 			<code>CS143B</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>CS143A</course_code>
@@ -450,7 +1053,25 @@
 			<code>CS133</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>CS132</course_code>
@@ -462,7 +1083,26 @@
 			<code>CS165</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>CS161</course_code>
@@ -474,7 +1114,25 @@
 			<code>CS175</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>CS171</course_code>
@@ -486,7 +1144,26 @@
 			<code>CS113</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>CS171</course_code>
@@ -505,7 +1182,26 @@
 			<code>CS132</code>
 			<units>4</units>
 			<offerings>
-				<term_id></term_id>
+        <term_id>1</term_id>
+        <term_id>2</term_id>
+        <term_id>3</term_id>
+        <term_id>4</term_id>
+        <term_id>5</term_id>
+        <term_id>6</term_id>
+        <term_id>7</term_id>
+        <term_id>8</term_id>
+        <term_id>9</term_id>
+        <term_id>10</term_id>
+        <term_id>11</term_id>
+        <term_id>12</term_id>
+        <term_id>13</term_id>
+        <term_id>14</term_id>
+        <term_id>15</term_id>
+        <term_id>16</term_id>
+        <term_id>17</term_id>
+        <term_id>18</term_id>
+        <term_id>19</term_id>
+        <term_id>20</term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS23</course_code>

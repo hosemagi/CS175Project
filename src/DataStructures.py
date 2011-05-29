@@ -134,6 +134,8 @@ class Major:
                 courseCodeNode = courseNode.getElementsByTagName("code")
                 coursePrereqsNode = courseNode.getElementsByTagName("prereqs")
                 coursePrereqsNodes = coursePrereqsNode[0].getElementsByTagName("course_code")
+                courseOfferingsNode = courseNode.getElementsByTagName("offerings")
+                courseOfferingsNodes = courseOfferingsNode[0].getElementsByTagName("term_id")
                 
                 course.title = courseTitleNode[0].firstChild.nodeValue
                 course.units = courseUnitNode[0].firstChild.nodeValue
@@ -143,6 +145,9 @@ class Major:
                 
                 for courseCodeNode in coursePrereqsNodes:
                     course.prereqs.append(courseCodeNode.firstChild.nodeValue)
+                
+                for courseOfferingNode in courseOfferingsNodes:
+                    course.offerings.append(courseOfferingNode.firstChild.nodeValue)
                 
                 print "Course : " + course.title
                 print "Code: " + course.courseCode
