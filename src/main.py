@@ -8,11 +8,6 @@ from Numberjack import *
 import Mistral
 import DataStructures
 
-def insert(original, new, pos):
-    '''Inserts new inside original at pos.'''
-    return original[:pos] + new + original[pos:]
-
-
 
 # creates and solves a model for a given major
 def generateSchedule(majorName):
@@ -71,22 +66,6 @@ def generateSchedule(majorName):
     
         # get an easy reference for the prerequisites for the current course
         prereqs = course.prereqs
-        offerings = course.offerings
-        invalidTerms = []
-        for j in masterCourseTerms:
-            if j not in offerings:
-                invalidTerms.append(j)
-        for k in invalidTerms:
-            model.add(courseTerms[i] != k)
-        #list = ''
-        #for j in offerings:
-        #    list += ('(courseTerms[i] = ' + str(j) + ') | ')
-        #list = list[:-3]
-        #begin = 'model.add('
-        #list = begin + list
-        #list += ')'
-        #print course.courseCode + ': ' + list
-        
         
         # for each prerequisite (String course code of prereq course)
         for prereq in prereqs:
@@ -99,6 +78,16 @@ def generateSchedule(majorName):
             #    NOTE: & and | logical operators are required for numberjack
             #         'and' and 'or' won't work... we had lots of early bugs from this
             model.add((courseTerms[i] > 0) & (0 < courseTerms[prereqIndex] < courseTerms[i]) | (courseTerms[i] == 0))
+        
+        # get the offerings for each course
+        offerings = course.offerings
+        invalidTerms = [t for t in masterCourseTerms if str(t) not in offerings]
+        #print course.courseCode + ": " + str(invalidTerms)
+        
+        # restrict terms available to each course
+        for k in invalidTerms:
+            model.add(courseTerms[i] != k)  
+    
     
     # CONSTRAINT: MAX UNIT LOAD IS ENFORCED FOR EACH TERM
     # for each possible term
@@ -111,8 +100,8 @@ def generateSchedule(majorName):
     
     
     #@TODO: Constraints to be added:
-    # "course offering" constraints
-    # min units for major constraint
+    # "course offering" constraints  ........DONE
+    # min units for major constraint  .......IN PROGRESS
     
     # Solve the Model
     msolver = model.load('Mistral', courseTerms)
