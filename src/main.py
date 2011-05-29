@@ -7,6 +7,7 @@ from datetime import datetime
 from Numberjack import *
 import Mistral
 import DataStructures
+import Output
 
 
 # creates and solves a model for a given major
@@ -114,22 +115,7 @@ def generateSchedule(majorName):
      
     # print final solution
     #@TODO: this will eventually be formatted output for the php ui script to read       
-    printSchedule(major, courseTerms, msolver)
-
-
-
-# printSchedule is a convenient method for outputting the results of the solver        
-def printSchedule(major, courseTerms, solver):
-    print "\n\n\n\n#########################################################"
-    print "####        PROPOSED SCHEDULE                        ####"
-    print "#########################################################"
-    max_term = max([courseTerms[i].get_value(solver) for i in range(len(courseTerms))])
-    # added print for debugging
-    print max_term
-    for i in range(1, max_term):
-        print "\nTerm " + str(i) + ": "
-        coursesForTerm = [str(major.courses[j].courseCode) for j in range(len(courseTerms)) if (courseTerms[j].get_value(solver) == i)]
-        print coursesForTerm
+    Output.printSchedule(major, courseTerms, msolver)
 
 # Generate a proposed schedule for ICS Major
 generateSchedule('ics')
