@@ -15,6 +15,7 @@ import xml.dom.minidom
 #        prereqs          (a list of course codes that represent prerequisite courses)
 #                         NOTE: you can access Course objects by using major.getCourse(courseCode)
 #        offerings        a list of terms when this course is offered (@TODO: IMPLEMENT THIS)
+#        scheduledTerm    
 #
 #    Methods
 #        <none>
@@ -52,10 +53,12 @@ class Course:
         print "Initializing course..."
         self.prereqs = []
         self.units = 0
-        self.courseCode = ""
+        self.courseCode = "NoCode"
         self.offerings = []
-        self.title = ""
+        self.title = "NoTitle"
+        self.scheduledTerm = 0
         self.index = -1
+
         
 class CourseGroup:
     """Defines a requirement group for a major, created by a Major object"""
