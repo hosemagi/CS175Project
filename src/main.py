@@ -39,9 +39,9 @@ def generateSchedule(majorName):
     
     # OBJECTIVE FUNCTION: minimize Z
     # @TODO: currently this makes the solver take forever to run, investigate!
-    # for i in range(len(courseTerms)):
+    #for i in range(len(courseTerms)):
     #    model.add(courseTerms[i] <= Z)
-    # model.add(Minimize(Z))
+    #model.add(Minimize(Z))
     
     # Get the min unit for the major
     minUnits = int(major.minUnits)
@@ -102,12 +102,8 @@ def generateSchedule(majorName):
         # 'term' is the current term we are adding the constraint for 
         model.add(sum([(courseTerms[i] == term) for i in range(len(courseTerms))]) <= 4 )
     
-    #CONSTRAINT: Minimum units for major is met
+    # CONSTRAINT: Minimum units for major is met
     model.add(sum([(int(major.courses[i].units) * (courseTerms[i]>0)) for i in range(len(courseTerms))]) >= minUnits )
-    
-    #@TODO: Constraints to be added:
-    # "course offering" constraints  ........DONE
-    # min units for major constraint  .......IN PROGRESS
     
     # Solve the Model
     msolver = model.load('Mistral', courseTerms)
