@@ -1,7 +1,7 @@
 <major_requirements>
 
 <major_title>ICS</major_title>
-<min_units>180</min_units>
+<min_units>156</min_units>
 
 <groups>
 <course_group>
@@ -175,7 +175,6 @@
 			<code>MATH2A</code>
 			<units>4</units>
 			<offerings>
-				<term_id>
           <term_id>1</term_id>
           <term_id>2</term_id>
           <term_id>3</term_id>
@@ -196,7 +195,6 @@
           <term_id>18</term_id>
           <term_id>19</term_id>
           <term_id>20</term_id>
-        </term_id>
 			</offerings>
 			<prereqs>
 			</prereqs>
@@ -207,7 +205,6 @@
 			<code>MATH2B</code>
 			<units>4</units>
 			<offerings>
-				<term_id>
           <term_id>1</term_id>
           <term_id>2</term_id>
           <term_id>3</term_id>
@@ -228,7 +225,6 @@
           <term_id>18</term_id>
           <term_id>19</term_id>
           <term_id>20</term_id>
-        </term_id>
 			</offerings>
 			<prereqs>
 				<course_code>MATH2A</course_code>
@@ -664,7 +660,6 @@
 			<code>IN4MATX115</code>
 			<units>4</units>
 			<offerings>
-				<term_id>
           <term_id>1</term_id>
           <term_id>2</term_id>
 
@@ -685,7 +680,6 @@
 
           <term_id>19</term_id>
           <term_id>20</term_id>
-        </term_id>
 			</offerings>
 			<prereqs>
 				<course_code>ICS6B</course_code>
@@ -698,7 +692,6 @@
 			<code>IN4MATX123</code>
 			<units>4</units>
 			<offerings>
-				<term_id>
           <term_id>1</term_id>
           <term_id>2</term_id>
 
@@ -719,7 +712,6 @@
 
           <term_id>19</term_id>
           <term_id>20</term_id>
-        </term_id>
 			</offerings>
 			<prereqs>
 				<course_code>CS141</course_code>

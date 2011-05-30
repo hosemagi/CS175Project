@@ -43,6 +43,9 @@ def generateSchedule(majorName):
     #    model.add(courseTerms[i] <= Z)
     # model.add(Minimize(Z))
     
+    # Get the min unit for the major
+    minUnits = int(major.minUnits)
+    
     # CONSTRAINT: REQUIREMENTS MET FOR EACH COURSE GROUP
     # for each course group
     for i in range(len(major.courseGroups)):
@@ -99,6 +102,8 @@ def generateSchedule(majorName):
         # 'term' is the current term we are adding the constraint for 
         model.add(sum([(courseTerms[i] == term) for i in range(len(courseTerms))]) <= 4 )
     
+    #CONSTRAINT: Minimum units for major is met
+    model.add(sum([(int(major.courses[i].units) * (courseTerms[i]>0)) for i in range(len(courseTerms))]) >= minUnits )
     
     #@TODO: Constraints to be added:
     # "course offering" constraints  ........DONE

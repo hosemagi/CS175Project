@@ -20,7 +20,7 @@ class Outputter:
         print "####        PROPOSED SCHEDULE                        ####"
         print "#########################################################"
         max_term = max([self.courseTerms[i].get_value(self.solver) for i in range(len(self.courseTerms))])
-        for i in range(1, max_term):
+        for i in range(1, max_term+1):
             print "\nTerm " + str(i) + ": "
             coursesForTerm = [str(self.major.courses[j].courseCode) for j in range(len(self.courseTerms)) if (self.courseTerms[j].get_value(self.solver) == i)]
             print coursesForTerm
