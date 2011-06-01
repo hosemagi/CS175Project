@@ -29,7 +29,7 @@ def generateSchedule(majorName):
     
     # Z is a Numberjack Variable that represents the maximum number of terms
     # Ultimate goal is to produce solutions that minimize Z 
-    Z = Variable(1, len(major.courses))
+    #Z = Variable(1, len(major.courses))
     
     # declare the Numberjack Constraint Model
     model = Model()
@@ -81,8 +81,9 @@ def generateSchedule(majorName):
             #    (2) OR course was not taken (therefore prereqs don't have to be)
             #    NOTE: & and | logical operators are required for numberjack
             #         'and' and 'or' won't work... we had lots of early bugs from this
-            model.add((courseTerms[i] > 0) & (0 < courseTerms[prereqIndex] < courseTerms[i]) | (courseTerms[i] == 0))
+            model.add(((courseTerms[i] > 0) & (0 < courseTerms[prereqIndex] < courseTerms[i])) | (courseTerms[i] == 0))
         
+        # CONSTRAINT: restrict course offerings for each course
         # get the offerings for each course
         offerings = course.offerings
         invalidTerms = [t for t in masterCourseTerms if str(t) not in offerings]
