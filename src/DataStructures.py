@@ -46,11 +46,17 @@ import xml.dom.minidom
 #        getCourse(courseCode)
 #            returns an instance of 'Course' for the given course code in the major
 
+silent = True
+
+def debug_print(msg):
+    if not silent:
+        print msg
+
 class Course:
     """Defines a course"""
     
     def __init__(self):
-        print "Initializing course..."
+        debug_print("Initializing course...")
         self.prereqs = []
         self.units = 0
         self.courseCode = "NoCode"
@@ -64,7 +70,7 @@ class CourseGroup:
     """Defines a requirement group for a major, created by a Major object"""
     
     def __init__(self):
-        print "Initializing course group..."
+        debug_print("Initializing course group...")
         self.title = ""
         self.numCoursesRequired = 0
         self.courses = []
@@ -74,7 +80,7 @@ class Major:
     """Class for holding information for a given major, initialized with XML file"""
     
     def __init__(self):
-        print "Initializing major..."
+        debug_print("Initializing major...")
         self.title = ""
         self.minUnits = []
         self.courseDict = dict()
@@ -92,10 +98,10 @@ class Major:
         foundDuplicate = False
         major = Major()
         if(majorName.lower() == "ics"):
-            print "Loading XML File ICSMajor.xml"
+            debug_print("Loading XML File ICSMajor.xml")
             xmldoc = xml.dom.minidom.parse("../ICSMajor.xml")
         elif(majorName.lower() == "cs"):
-            print "Loading XML File CSMajor.xml"
+            debug_print("Loading XML File CSMajor.xml")
             xmldoc = xml.dom.minidom.parse("../CSMajor.xml") 
             
         majorTitleNode = xmldoc.getElementsByTagName("major_title")
@@ -106,13 +112,13 @@ class Major:
         major.title = majorTitleNode[0].firstChild.nodeValue
         major.minUnits = minUnitsNode[0].firstChild.nodeValue
         
-        print "Major name: " + major.title
-        print "Min units: " + major.minUnits
-        print "Parsing "+str(len(courseGroupNodes))+" required course groups..."
+        debug_print("Major name: " + major.title)
+        debug_print("Min units: " + major.minUnits)
+        debug_print("Parsing "+str(len(courseGroupNodes))+" required course groups...")
         
         index = 0
         for node in courseGroupNodes:
-            print ""
+            debug_print("")
             courseGroup = CourseGroup()
             courseGroupTitleNode = node.getElementsByTagName("title")
             courseGroupNumRequiredNode = node.getElementsByTagName("num_courses_required")
@@ -125,12 +131,12 @@ class Major:
             
             courseGroup.startIndex = index
             
-            print "Course Group: " + courseGroup.title
-            print "Minimum Required: " + courseGroup.numCoursesRequired
-            print "Parsing " + str(len(coursesNodes)) + " courses in group..."
+            debug_print("Course Group: " + courseGroup.title)
+            debug_print("Minimum Required: " + courseGroup.numCoursesRequired)
+            debug_print("Parsing " + str(len(coursesNodes)) + " courses in group...")
             
             for courseNode in coursesNodes:
-                print "----------"
+                debug_print("----------")
                 course = Course()
                 courseTitleNode = courseNode.getElementsByTagName("title")
                 courseUnitNode = courseNode.getElementsByTagName("units")
@@ -152,28 +158,28 @@ class Major:
                 for courseOfferingNode in courseOfferingsNodes:
                     course.offerings.append(courseOfferingNode.firstChild.nodeValue.encode('utf-8'))
                 
-                print "Course : " + course.title
-                print "Code: " + course.courseCode
-                print "Units: " + course.units
-                print "Prereqs: " + str(course.prereqs)
+                debug_print("Course : " + course.title)
+                debug_print("Code: " + course.courseCode)
+                debug_print("Units: " + course.units)
+                debug_print("Prereqs: " + str(course.prereqs))
                 
                 major.courses.append(course)
                 courseGroup.courses.append(course)
                 
                 if(major.courseDict.has_key(course.courseCode)):
-                    print "DUPLICATE: " + course.courseCode
+                    debug_print("DUPLICATE: " + course.courseCode)
                     foundDuplicate = True
                 major.courseDict[course.courseCode] = course
                     
-        print "\n\nALL COURSES IN MAJOR:"
+        debug_print("\n\nALL COURSES IN MAJOR:")
         for i in range(len(major.courses)):
-            print major.courses[i].courseCode + ": " + str(i)
+            debug_print(major.courses[i].courseCode + ": " + str(i))
             
                     
-        print "Successfully initialized major " + major.title
-        print str(len(major.courses)) + " courses"
+        debug_print("Successfully initialized major " + major.title)
+        debug_print(str(len(major.courses)) + " courses")
         if foundDuplicate:
-            print "Found at least one duplicated course, check output"
+            debug_print("Found at least one duplicated course, check output")
         return major
 
 #Major.getMajor('ics')

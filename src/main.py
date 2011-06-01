@@ -9,13 +9,18 @@ import Mistral
 import DataStructures
 from Output import Outputter
 
+silent = True
+
+def debug_print(msg):
+    if not silent:
+        print msg
 
 # creates and solves a model for a given major
 def generateSchedule(majorName):
     major = DataStructures.Major.getMajor(majorName)
-    print "Major: " + major.title
-    print "Minimum units: " + str(major.minUnits)
-    print "Total # of classes: " + str(len(major.courses))
+    debug_print("Major: " + major.title)
+    debug_print("Minimum units: " + str(major.minUnits))
+    debug_print("Total # of classes: " + str(len(major.courses)))
 
     # Maximum unit load per term
     # @TODO: change term unit load constraint to use this variable
@@ -87,7 +92,7 @@ def generateSchedule(majorName):
         # get the offerings for each course
         offerings = course.offerings
         invalidTerms = [t for t in masterCourseTerms if str(t) not in offerings]
-        #print course.courseCode + ": " + str(invalidTerms)
+        #debug_print course.courseCode + ": " + str(invalidTerms)
         
         # restrict terms available to each course
         for k in invalidTerms:
@@ -108,17 +113,18 @@ def generateSchedule(majorName):
     
     # Solve the Model
     msolver = model.load('Mistral', courseTerms)
-    print "Solving..."
+    debug_print("Solving...")
     starttime = datetime.now()
     msolver.solve()
     endtime = datetime.now()
     elapsed = endtime - starttime
-    print "Solution took " + str(elapsed)
+    debug_print("Solution took " + str(elapsed))
      
-    # print final solution
+    # debug_print final solution
     #@TODO: this will eventually be formatted output for the php ui script to read       
     outputter = Outputter(major, courseTerms, msolver)
-    outputter.printSchedule()
+    outputter.outputXML()
+    #outputter.printSchedule()
 
 # Generate a proposed schedule for ICS Major
 generateSchedule('ics')
@@ -127,12 +133,12 @@ generateSchedule('ics')
 
 # DONT LOOK HERE -- THIS IS WHERE CODE GOES TO DIE
 
-    #print "\n\nDISPLAYING COURSE SELECTION FOR MAJOR " + major.title
+    #debug_print "\n\nDISPLAYING COURSE SELECTION FOR MAJOR " + major.title
     #for i in range(len(major.courseGroups)):
-    #    print "\n############################"
+    #    debug_print "\n############################"
     #    courseGroup = major.courseGroups[i]
-    #    print "Classes for course group: " + courseGroup.title
+    #    debug_print "Classes for course group: " + courseGroup.title
     #    startIndex = courseGroup.startIndex
     #    endIndex = startIndex + len(courseGroup.courses)
     #    for j in range(len(courseGroup.courses)):
-    #        print courseGroup.courses[j].courseCode + ": " + str(courseTerms[startIndex + j].get_value(msolver))
+    #        debug_print courseGroup.courses[j].courseCode + ": " + str(courseTerms[startIndex + j].get_value(msolver))
