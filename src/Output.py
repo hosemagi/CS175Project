@@ -1,3 +1,9 @@
+###########################
+# Output.py
+# Group 6: Academic Planner
+###########################
+
+
 import xml.dom.minidom
 from xml.dom.minidom import getDOMImplementation
 

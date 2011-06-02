@@ -24,7 +24,7 @@ def generateSchedule(majorName):
 
     # Maximum unit load per term
     # @TODO: change term unit load constraint to use this variable
-    max_term_units = 16
+    max_term_units = 20
     
     # A Numberjack array of Variables
     #    - the index of an element in the array represents a course (as its index in major.courses)
