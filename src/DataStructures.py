@@ -1,6 +1,7 @@
-'''
-@author: preston
-'''
+###########################
+# DataStructures.py
+# Group 6: Academic Planner
+###########################
 
 #import XML parsing packages from python standard library
 import xml.dom.minidom
