@@ -3,6 +3,7 @@
 # Group 6: Academic Planner
 ###########################
 
+import sys
 from datetime import datetime
 from Numberjack import *
 import Mistral
@@ -126,8 +127,11 @@ def generateSchedule(majorName):
     outputter.outputXML()
     #outputter.printSchedule()
 
-# Generate a proposed schedule for ICS Major
-generateSchedule('ics')
+# Generate a proposed schedule for selected major, or ics if none specified
+selectedMajor = 'ics'
+if len(sys.argv) > 1:
+    selectedMajor = sys.argv[1]
+generateSchedule(selectedMajor)
 
 
 

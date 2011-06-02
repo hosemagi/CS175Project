@@ -9,7 +9,7 @@ class Outputter:
         self.solver = solver
         self.terms = []
         self.maxTerm = max([courseTerms[i].get_value(solver) for i in range(len(courseTerms))])
-        for i in range(1, self.maxTerm):
+        for i in range(1, self.maxTerm+1):
             thisTerm = [major.courses[j] for j in range(len(courseTerms)) if (courseTerms[j].get_value(solver) == i)]
             self.terms.append(thisTerm)
         self.startingTermYear = 2011
@@ -58,19 +58,33 @@ class Outputter:
                 course = self.terms[i][j]
                 
                 courseElement = xmldoc.createElementNS(None, "course")
+                
                 codeElement = xmldoc.createElementNS(None, "course_code")
                 text = xmldoc.createTextNode(course.courseCode)
                 codeElement.appendChild(text)
                 courseElement.appendChild(codeElement)
                 
+                titleElement = xmldoc.createElementNS(None, "course_title")
+                text = xmldoc.createTextNode(course.title)
+                titleElement.appendChild(text)
+                courseElement.appendChild(titleElement)
+                
+                unitsElement = xmldoc.createElementNS(None, "course_units")
+                text = xmldoc.createTextNode(str(course.units))
+                unitsElement.appendChild(text)
+                courseElement.appendChild(unitsElement)
+                
                 coursesElement.appendChild(courseElement)
                 
-                
-                
-            
             resultsElement.appendChild(termElement)
         
-        print xmldoc.toprettyxml()
+        xmlstr = xmldoc.toxml('utf-8')
+        print xmlstr
+        
+        #f = open('utf_test.xml', 'w')
+        #f.write(xmlstr)
+        #f.close()
+        #print "utf_test.xml".encode('utf_8')
      
     #def jsonRepresentation(self):
     #    d = dict()

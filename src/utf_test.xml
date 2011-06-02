@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<results>
+	<num_terms>11</num_terms>
+	<term>
+		<term_number>0</term_number>
+		<courses>
+			<course>
+				<course_code>ICS21</course_code>
+				<course_title>Intro to Computer Science I</course_title>
+			</course>
+			<course>
+				<course_code>MATH2A</course_code>
+				<course_title>Calculus</course_title>
+			</course>
+			<course>
+				<course_code>ICS6B</course_code>
+				<course_title>Boolean Algebra and Symbolic Logic</course_title>
+			</course>
+			<course>
+				<course_code>MATH6G</course_code>
+				<course_title>Linear Algebra</course_title>
+			</course>
+		</courses>
+	</term>
+	<term>
+		<term_number>1</term_number>
+		<courses>
+			<course>
+				<course_code>ICS22</course_code>
+				<course_title>Intro to Computer Science II</course_title>
+			</course>
+			<course>
+				<course_code>ICS51</course_code>
+				<course_title>Intro to Computer Organization</course_title>
+			</course>
+			<course>
+				<course_code>MATH2B</course_code>
+				<course_title>Calculus</course_title>
+			</course>
+			<course>
+				<course_code>ICS6D</course_code>
+				<course_title>Discrete Math for CS</course_title>
+			</course>
+		</courses>
+	</term>
+	<term>
+		<term_number>2</term_number>
+		<courses>
+			<course>
+				<course_code>ICS23</course_code>
+				<course_title>Fundamental Data Structures</course_title>
+			</course>
+			<course>
+				<course_code>MATH67</course_code>
+				<course_title>Intro to Prob and Stats for CS</course_title>
+			</course>
+			<course>
+				<course_code>IN4MATX161</course_code>
+				<course_title>Social Analysis of Computerization</course_title>
+			</course>
+			<course>
+				<course_code>IN4MATX131</course_code>
+				<course_title>Human Computer Interaction</course_title>
+			</course>
+		</courses>
+	</term>
+	<term>
+		<term_number>3</term_number>
+		<courses>
+			<course>
+				<course_code>HIST40A</course_code>
+				<course_title>American History I</course_title>
+			</course>
+			<course>
+				<course_code>HIST40B</course_code>
+				<course_title>American History II</course_title>
+			</course>
+			<course>
+				<course_code>CS161</course_code>
+				<course_title>Design and Analysis of Algorithms</course_title>
+			</course>
+			<course>
+				<course_code>CS151</course_code>
+				<course_title>Digital Logic Design</course_title>
+			</course>
+		</courses>
+	</term>
+	<term>
+		<term_number>4</term_number>
+		<courses>
+			<course>
+				<course_code>ICS52</course_code>
+				<course_title>Intro to Software Engineering</course_title>
+			</course>
+			<course>
+				<course_code>CS141</course_code>
+				<course_title>Concepts in Programming Languages</course_title>
+			</course>
+			<course>
+				<course_code>CS143A</course_code>
+				<course_title>Principles of Operating Systems</course_title>
+			</course>
+			<course>
+				<course_code>CS171</course_code>
+				<course_title>Intro to Artificial Intelligence</course_title>
+			</course>
+		</courses>
+	</term>
+	<term>
+		<term_number>5</term_number>
+		<courses>
+			<course>
+				<course_code>HIST40C</course_code>
+				<course_title>American History III</course_title>
+			</course>
+			<course>
+				<course_code>CS152</course_code>
+				<course_title>Computer Systems Architecture</course_title>
+			</course>
+			<course>
+				<course_code>CS143B</course_code>
+				<course_title>Project in Operating Systems</course_title>
+			</course>
+			<course>
+				<course_code>CS113</course_code>
+				<course_title>Computer Game Development</course_title>
+			</course>
+		</courses>
+	</term>
+	<term>
+		<term_number>6</term_number>
+		<courses>
+			<course>
+				<course_code>WRITING39C</course_code>
+				<course_title>Argument and Research</course_title>
+			</course>
+			<course>
+				<course_code>IN4MATX111</course_code>
+				<course_title>Software Tools and Methods</course_title>
+			</course>
+			<course>
+				<course_code>CS142A</course_code>
+				<course_title>Compilers and Interpreters</course_title>
+			</course>
+			<course>
+				<course_code>CS163</course_code>
+				<course_title>Graph Algorithms</course_title>
+			</course>
+		</courses>
+	</term>
+	<term>
+		<term_number>7</term_number>
+		<courses>
+			<course>
+				<course_code>WRITING37</course_code>
+				<course_title>Instensive Writing</course_title>
+			</course>
+			<course>
+				<course_code>ART40A</course_code>
+				<course_title>Art History I </course_title>
+			</course>
+			<course>
+				<course_code>ART40B</course_code>
+				<course_title>Art History II </course_title>
+			</course>
+			<course>
+				<course_code>IN4MATX163</course_code>
+				<course_title>Project in Social Impact of Computing</course_title>
+			</course>
+		</courses>
+	</term>
+	<term>
+		<term_number>8</term_number>
+		<courses>
+			<course>
+				<course_code>HIST15C</course_code>
+				<course_title>Asian American Studies I</course_title>
+			</course>
+			<course>
+				<course_code>ART40C</course_code>
+				<course_title>Art History III </course_title>
+			</course>
+			<course>
+				<course_code>GERM1C</course_code>
+				<course_title>German III </course_title>
+			</course>
+			<course>
+				<course_code>PHIL114</course_code>
+				<course_title>Topics in Asian Philosophy</course_title>
+			</course>
+		</courses>
+	</term>
+	<term>
+		<term_number>9</term_number>
+		<courses>
+			<course>
+				<course_code>ANTH2A</course_code>
+				<course_title>Intro Anthropology </course_title>
+			</course>
+			<course>
+				<course_code>ECON1</course_code>
+				<course_title>Economics I </course_title>
+			</course>
+			<course>
+				<course_code>PHIL132</course_code>
+				<course_title>SOCIAL CONTRACT</course_title>
+			</course>
+			<course>
+				<course_code>CHIN1C</course_code>
+				<course_title>ChinesesIII </course_title>
+			</course>
+		</courses>
+	</term>
+	<term>
+		<term_number>10</term_number>
+		<courses>
+			<course>
+				<course_code>POLISCI32</course_code>
+				<course_title>Political Theory</course_title>
+			</course>
+			<course>
+				<course_code>MUSIC78A</course_code>
+				<course_title>History of Jazz </course_title>
+			</course>
+			<course>
+				<course_code>CS132</course_code>
+				<course_title>Computer Networks</course_title>
+			</course>
+		</courses>
+	</term>
+</results>
