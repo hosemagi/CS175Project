@@ -107,7 +107,8 @@ def generateSchedule(majorName):
         # 'i' represents the index of the course in the master course array
         # 'courseTerms[i]' is the term course i is scheduled for
         # 'term' is the current term we are adding the constraint for 
-        model.add(sum([(courseTerms[i] == term) for i in range(len(courseTerms))]) <= 4 )
+        model.add(sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) <= 18)
+        
     
     # CONSTRAINT: Minimum units for major is met
     model.add(sum([(int(major.courses[i].units) * (courseTerms[i]>0)) for i in range(len(courseTerms))]) >= minUnits )
@@ -125,7 +126,7 @@ def generateSchedule(majorName):
     #@TODO: this will eventually be formatted output for the php ui script to read       
     outputter = Outputter(major, courseTerms, msolver)
     outputter.outputXML()
-    #outputter.printSchedule()
+    outputter.printSchedule()
 
 # Generate a proposed schedule for selected major, or ics if none specified
 selectedMajor = 'ics'

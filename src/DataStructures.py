@@ -104,6 +104,12 @@ class Major:
         elif(majorName.lower() == "cs"):
             debug_print("Loading XML File CSMajor.xml")
             xmldoc = xml.dom.minidom.parse("../CSMajor.xml") 
+        elif(majorName.lower() == "cse"):
+            debug_print("Loading XML File CSEMajor.xml")
+            xmldoc = xml.dom.minidom.parse("../CSEMajor.xml") 
+        elif(majorName.lower() == "informatics"):
+            debug_print("Loading XML File INFORMATICSMajor.xml")
+            xmldoc = xml.dom.minidom.parse("../INFORMATICSMajor.xml") 
             
         majorTitleNode = xmldoc.getElementsByTagName("major_title")
         minUnitsNode = xmldoc.getElementsByTagName("min_units")
