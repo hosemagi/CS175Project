@@ -17,7 +17,8 @@ import xml.dom.minidom
 #                         NOTE: you can access Course objects by using major.getCourse(courseCode)
 #        offerings        a list of terms when this course is offered (@TODO: IMPLEMENT THIS)
 #        scheduledTerm    
-#
+# 
+#        diff            Difficulty Rating either 1,2 or 3 
 #    Methods
 #        <none>
 #
