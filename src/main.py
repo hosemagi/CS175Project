@@ -17,7 +17,7 @@ def debug_print(msg):
         print msg
 
 # creates and solves a model for a given major
-def generateSchedule(majorName, max_term_units):
+def generateSchedule(majorName, max_term_units, preferredCourses):
     major = DataStructures.Major.getMajor(majorName)
     debug_print("Major: " + major.title)
     debug_print("Minimum units: " + str(major.minUnits))
@@ -109,6 +109,13 @@ def generateSchedule(majorName, max_term_units):
     # CONSTRAINT: Minimum units for major is met
     model.add(sum([(int(major.courses[i].units) * (courseTerms[i]>0)) for i in range(len(courseTerms))]) >= minUnits )
     
+    # CONSTRAINT: Each preferred elective selected is taken
+    for i in range(len(preferredCourses)):
+        courseCode = preferredCourses[i]
+        courseIndex = major.getCourseIndex(courseCode)
+        model.add(courseTerms[courseIndex] > 0)
+    
+    
     # Solve the Model
     msolver = model.load('Mistral', courseTerms)
     debug_print("Solving...")
@@ -121,10 +128,16 @@ def generateSchedule(majorName, max_term_units):
     # debug_print final solution
     #@TODO: this will eventually be formatted output for the php ui script to read       
     outputter = Outputter(major, courseTerms, msolver)
-    outputter.outputXML()
-    #outputter.printSchedule()
+    #outputter.outputXML()
+    outputter.printSchedule()
 
-# Generate a proposed schedule for selected major, or ics if none specified
+
+
+# Parse command-line args from PHP script or other source
+# argv[1] = major
+# argv[2] = max units per term
+# argv[3..n] = preferred course codes
+
 selectedMajor = 'ics'
 if len(sys.argv) > 1:
     selectedMajor = sys.argv[1]
@@ -132,8 +145,15 @@ if len(sys.argv) > 1:
 max_term_units = 20
 if len(sys.argv) > 2:
     max_term_units = int(sys.argv[2])
+    
+preferredCourses = []
+if(len(sys.argv) > 3):
+    for i in range(3, len(sys.argv)):
+        courseCode = sys.argv[i]
+        preferredCourses.append(courseCode)
 
-generateSchedule(selectedMajor, max_term_units)
+# Generate a proposed schedule for selected major, or ics if none specified
+generateSchedule(selectedMajor, max_term_units, preferredCourses)
 
 
 
