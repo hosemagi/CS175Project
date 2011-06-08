@@ -67,6 +67,7 @@ class Course:
         self.scheduledTerm = 0
         self.index = -1
 
+        self.diff  = -1
         
 class CourseGroup:
     """Defines a requirement group for a major, created by a Major object"""
@@ -153,10 +154,12 @@ class Major:
                 coursePrereqsNodes = coursePrereqsNode[0].getElementsByTagName("course_code")
                 courseOfferingsNode = courseNode.getElementsByTagName("offerings")
                 courseOfferingsNodes = courseOfferingsNode[0].getElementsByTagName("term_id")
+                courseDiffNode = courseNode.getElementsByTagName("diff")
                 
                 course.title = courseTitleNode[0].firstChild.nodeValue
                 course.units = courseUnitNode[0].firstChild.nodeValue.encode('utf-8')
                 course.courseCode = courseCodeNode[0].firstChild.nodeValue
+                course.diff  = courseDiffNode[0].firstChild.nodeValue.encode('utf-8')
                 course.index = index
                 index += 1
                 
@@ -170,6 +173,7 @@ class Major:
                 debug_print("Code: " + course.courseCode)
                 debug_print("Units: " + course.units)
                 debug_print("Prereqs: " + str(course.prereqs))
+                debug_print("Difficulty: " +str(course.diff))
                 
                 major.courses.append(course)
                 courseGroup.courses.append(course)
