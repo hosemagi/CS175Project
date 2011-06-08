@@ -85,6 +85,7 @@ class Outputter:
             resultsElement.appendChild(termElement)
         
         xmlstr = xmldoc.toxml('utf-8')
+        #xmlstr = xmldoc.toprettyxml()
         print xmlstr
         
         #f = open('utf_test.xml', 'w')

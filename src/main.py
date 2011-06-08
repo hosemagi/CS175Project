@@ -17,15 +17,11 @@ def debug_print(msg):
         print msg
 
 # creates and solves a model for a given major
-def generateSchedule(majorName):
+def generateSchedule(majorName, max_term_units):
     major = DataStructures.Major.getMajor(majorName)
     debug_print("Major: " + major.title)
     debug_print("Minimum units: " + str(major.minUnits))
     debug_print("Total # of classes: " + str(len(major.courses)))
-
-    # Maximum unit load per term
-    # @TODO: change term unit load constraint to use this variable
-    max_term_units = 20
     
     # A Numberjack array of Variables
     #    - the index of an element in the array represents a course (as its index in major.courses)
@@ -107,7 +103,7 @@ def generateSchedule(majorName):
         # 'i' represents the index of the course in the master course array
         # 'courseTerms[i]' is the term course i is scheduled for
         # 'term' is the current term we are adding the constraint for 
-        model.add(sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) <= 18)
+        model.add(sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) <= max_term_units)
         
     
     # CONSTRAINT: Minimum units for major is met
@@ -126,13 +122,18 @@ def generateSchedule(majorName):
     #@TODO: this will eventually be formatted output for the php ui script to read       
     outputter = Outputter(major, courseTerms, msolver)
     outputter.outputXML()
-    outputter.printSchedule()
+    #outputter.printSchedule()
 
 # Generate a proposed schedule for selected major, or ics if none specified
 selectedMajor = 'ics'
 if len(sys.argv) > 1:
     selectedMajor = sys.argv[1]
-generateSchedule(selectedMajor)
+
+max_term_units = 20
+if len(sys.argv) > 2:
+    max_term_units = int(sys.argv[2])
+
+generateSchedule(selectedMajor, max_term_units)
 
 
 
