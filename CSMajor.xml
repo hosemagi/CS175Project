@@ -13,6 +13,7 @@
         <course>
           <title>Critical Reading and Rhetoric</title>
           <code>WRITING39B</code>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -30,6 +31,7 @@
         <course>
           <title>Argument and Research</title>
           <code>WRITING39C</code>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -46,6 +48,7 @@
         <course>
           <title>Upper Division Writing</title>
           <code>WRITING139W</code>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -86,6 +89,7 @@
 
           <title>General Education III</title>
           <code>GEIII1</code>
+           <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -117,6 +121,7 @@
         <course>
           <title>General Education III</title>
           <code>GEIII2</code>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -149,6 +154,7 @@
         <course>
           <title>General Education III</title>
           <code>GEIII3</code>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -188,6 +194,7 @@
         <course>
           <title>General Education IV</title>
           <code>GEIV1</code>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -219,6 +226,7 @@
         <course>
           <title>General Education IV</title>
           <code>GEIV2</code>
+           <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -250,6 +258,7 @@
         <course>
           <title>General Education IV</title>
           <code>GEIV3</code>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -289,6 +298,7 @@
       <courses>
 
         <course>
+          <diff>1</diff>
           <title>General Education VI</title>
           <code>GEVI</code>
           <units>4</units>
@@ -331,6 +341,7 @@
         <course>
           <title>General Education VII</title>
           <code>GEVII</code>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -367,6 +378,7 @@
       <num_courses_required>1</num_courses_required>
       <courses>
         <course>
+          <diff>1</diff>
           <title>General Education VIII</title>
           <code>GEVIII</code>
           <units>4</units>
@@ -405,6 +417,7 @@
 			<num_courses_required>5</num_courses_required>
 			<courses>
 				<course>
+                                        <diff>3</diff>
 					<title>Intro to Computer Science I</title>
 					<code>ICS21</code>
 					<units>6</units>
@@ -437,6 +450,7 @@
 				<course>
 					<title>Intro to Computer Science II</title>
 					<code>ICS22</code>
+                                        <diff>3</diff>
 					<units>6</units>
 					<offerings>
             <term_id>1</term_id>
@@ -468,6 +482,7 @@
 				<course>
 					<title>Fundamental Data Structures</title>
 					<code>ICS23</code>
+                                        <diff>3</diff>
 					<units>6</units>
 					<offerings>
             <term_id>1</term_id>
@@ -499,6 +514,7 @@
 				<course>
 					<title>Intro to Computer Organization</title>
 					<code>ICS51</code>
+                                        <diff>3</diff>
 					<units>6</units>
 					<offerings>
             <term_id>1</term_id>
@@ -531,6 +547,7 @@
 				<course>
 					<title>Intro to Software Engineering</title>
 					<code>ICS52</code>
+                                        <diff>3</diff>
 					<units>6</units>
 					<offerings>
             <term_id>2</term_id>
@@ -568,6 +585,7 @@
 				<course>
 					<title>Calculus</title>
 					<code>MATH2A</code>
+                                        <diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -598,6 +616,7 @@
 				<course>
 					<title>Calculus</title>
 					<code>MATH2B</code>
+                                        <diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -629,6 +648,7 @@
 				<course>
 					<title>Boolean Algebra and Symbolic Logic</title>
 					<code>ICS6B</code>
+                                        <diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -659,6 +679,7 @@
 				<course>
 					<title>Discrete Math for CS</title>
 					<code>ICS6D</code>
+                                        <diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>2</term_id>
@@ -688,6 +709,7 @@
 				<course>
 					<title>Linear Algebra</title>
 					<code>MATH6G</code>
+                                        <diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -718,6 +740,7 @@
 				<course>
 					<title>Symbolic Logic</title>
 					<code>PHIL29</code>
+                                        <diff>2</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -750,6 +773,7 @@
 				<course>
 					<title>Intro to Prob and Stats for CS</title>
 					<code>MATH67</code>
+                                        <diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -789,6 +813,7 @@
 				<course>
 					<title>Basic Physics I</title>
 					<code>Physics3A</code>
+                                        <diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -820,6 +845,7 @@
 				<course>
 					<title>Basic Physics II</title>
 					<code>Physics3B</code>
+                                        <diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -851,6 +877,7 @@
 				<course>
 					<title>Basic Physics III</title>
 					<code>Physics3C</code>
+                                        <diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -900,6 +927,7 @@
 				<course>
 					<title>Computer Networks</title>
 					<code>CS132</code>
+                                        <diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -941,6 +969,7 @@
 				<course>
 					<title>Concepts in Programming Languages</title>
 					<code>CS141</code>
+                                        <diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>2</term_id>
@@ -1002,6 +1031,7 @@
 				<course>
 					<title>Principles of Operating Systems</title>
 					<code>CS143A</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>2</term_id>
@@ -1033,6 +1063,7 @@
 				<course>
 					<title>Design and Analysis of Algorithms</title>
 					<code>CS161</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -1069,6 +1100,7 @@
 				<course>
 					<title>Intro to Artificial Intelligence</title>
 					<code>CS171</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -1102,6 +1134,7 @@
 				<course>
 					<title>Digital Logic Design</title>
 					<code>CS151</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -1135,6 +1168,7 @@
 				<course>
 					<title>Computer Systems Architecture</title>
 					<code>CS152</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
 
@@ -1175,6 +1209,7 @@
 				<course>
 					<title>Formal Language and Automata</title>
 					<code>CS162</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
 						<term_id>1</term_id>
@@ -1211,6 +1246,7 @@
 				<course>
 					<title>Graph Algorithms</title>
 					<code>CS163</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -1242,6 +1278,7 @@
 				<course>
 					<title>Computational Geography</title>
 					<code>CS164</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
 						
@@ -1268,6 +1305,7 @@
 				<course>
 					<title>Applied Cryptography</title>
 					<code>CS167</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>3</term_id>
@@ -1294,6 +1332,7 @@
 				<course>
 					<title>Intro to Optimization</title>
 					<code>CS169</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
            
@@ -1329,6 +1368,7 @@
 				<course>
 					<title>Computer Game Development</title>
 					<code>CS113</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -1354,6 +1394,7 @@
 				<course>
 					<title>Advanced Graphics </title>
 					<code>CS114</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             
@@ -1378,6 +1419,7 @@
 				<course>
 					<title>Proj Data and Web Apps</title>
 					<code>CS122B</code>
+                                        <diff>3</diff>
 					<units>4</units>
 					<offerings>
             
@@ -1409,6 +1451,7 @@
 				<course>
 					<title>Advanced Computer Networks</title>
 					<code>CS133</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>2</term_id>
@@ -1439,6 +1482,7 @@
 				<course>
 					<title>Language Proccesor Construction</title>
 					<code>CS142B</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>2</term_id>
@@ -1469,6 +1513,7 @@
 				<course>
 					<title>Project in Operating Systems</title>
 					<code>CS143B</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>2</term_id>
@@ -1499,6 +1544,7 @@
 				<course>
 					<title>Digital Logic Design Lab</title>
 					<code>CS153</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             
@@ -1532,6 +1578,7 @@
 				<course>
 					<title>Computer Design Lab</title>
 					<code>CS154</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>2</term_id>
@@ -1562,6 +1609,7 @@
 				<course>
 					<title>Project in Algorithums and Data Structures </title>
 					<code>CS165</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>3</term_id>
@@ -1584,6 +1632,7 @@
 				<course>
 					<title>Project in Artificial Intelligence </title>
 					<code>CS175</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>2</term_id>
@@ -1621,6 +1670,7 @@
 				<course>
 					<title> Graphics </title>
 					<code>CS112</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -1654,6 +1704,7 @@
 				<course>
 					<title>Software Testing and QA</title>
 					<code>IN4MATX115</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>3</term_id>
@@ -1679,6 +1730,7 @@
 				<course>
 					<title>Software Architectures</title>
 					<code>IN4MATX123</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>3</term_id>
@@ -1701,6 +1753,7 @@
 				<course>
 					<title>Social Analysis of Computerization</title>
 					<code>IN4MATX161</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -1731,6 +1784,7 @@
 				<course>
 					<title>Human Computer Interaction</title>
 					<code>IN4MATX131</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>2</term_id>
@@ -1764,6 +1818,7 @@
 				<course>
 					<title>Computer and Network Security</title>
 					<code>CS134</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>3</term_id>
@@ -1790,6 +1845,7 @@
 				<course>
 					<title>Project in Social Impact of Computing</title>
 					<code>IN4MATX163</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -1825,6 +1881,7 @@
 				<course>
 					<title>Intro to Data Management</title>
 					<code>CS122A</code>
+<diff>3</diff>
 					<units>4</units>
 					<offerings>
             
