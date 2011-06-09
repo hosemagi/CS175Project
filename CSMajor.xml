@@ -1,11 +1,11 @@
 <major_requirements>
 
-  <major_title>CSE</major_title>
-  <min_units>180</min_units>
+	<major_title>CS</major_title>
+	<min_units>180</min_units>
 
-  <groups>
-    
-     <course_group>
+	<groups>
+
+    <course_group>
       <title> Writing Requirement</title>
       <num_courses_required>3</num_courses_required>
       <courses>
@@ -13,7 +13,7 @@
         <course>
           <title>Critical Reading and Rhetoric</title>
           <code>WRITING39B</code>
-<diff>1</diff>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -31,7 +31,7 @@
         <course>
           <title>Argument and Research</title>
           <code>WRITING39C</code>
-<diff>1</diff>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -48,7 +48,7 @@
         <course>
           <title>Upper Division Writing</title>
           <code>WRITING139W</code>
-<diff>1</diff>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -89,7 +89,7 @@
 
           <title>General Education III</title>
           <code>GEIII1</code>
-<diff>1</diff>
+           <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -121,7 +121,7 @@
         <course>
           <title>General Education III</title>
           <code>GEIII2</code>
-<diff>1</diff>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -154,7 +154,7 @@
         <course>
           <title>General Education III</title>
           <code>GEIII3</code>
-<diff>1</diff>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -194,7 +194,7 @@
         <course>
           <title>General Education IV</title>
           <code>GEIV1</code>
-<diff>1</diff>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -226,7 +226,7 @@
         <course>
           <title>General Education IV</title>
           <code>GEIV2</code>
-<diff>1</diff>
+           <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -258,7 +258,7 @@
         <course>
           <title>General Education IV</title>
           <code>GEIV3</code>
-<diff>1</diff>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -298,9 +298,9 @@
       <courses>
 
         <course>
+          <diff>1</diff>
           <title>General Education VI</title>
           <code>GEVI</code>
-<diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -341,7 +341,7 @@
         <course>
           <title>General Education VII</title>
           <code>GEVII</code>
-<diff>1</diff>
+          <diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -378,7 +378,7 @@
       <num_courses_required>1</num_courses_required>
       <courses>
         <course>
-<diff>1</diff>
+          <diff>1</diff>
           <title>General Education VIII</title>
           <code>GEVIII</code>
           <units>4</units>
@@ -413,15 +413,15 @@
     </course_group>
     
     <course_group>
-      <title>CSE Lower Division</title>
-      <num_courses_required>22</num_courses_required>
-      <courses>
-        <course>
-          <title>Intro to Computer Science I</title>
-          <code>ICS21</code>
-          <diff>3</diff>
-          <units>6</units>
-          <offerings>
+			<title>CS Lower Division</title>
+			<num_courses_required>5</num_courses_required>
+			<courses>
+				<course>
+                                        <diff>3</diff>
+					<title>Intro to Computer Science I</title>
+					<code>ICS21</code>
+					<units>6</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -442,17 +442,17 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-          </prereqs>
-        </course>
+					</offerings>
+					<prereqs>
+					</prereqs>
+				</course>
 
-        <course>
-          <title>Intro to Computer Science II</title>
-          <code>ICS22</code>
-          <diff>3</diff>
-          <units>6</units>
-          <offerings>
+				<course>
+					<title>Intro to Computer Science II</title>
+					<code>ICS22</code>
+                                        <diff>3</diff>
+					<units>6</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -473,18 +473,18 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>ICS21</course_code>
-          </prereqs>
-        </course>
+					</offerings>
+					<prereqs>
+						<course_code>ICS21</course_code>
+					</prereqs>
+				</course>
 
-        <course>
-          <title>Fundamental Data Structures</title>
-          <code>ICS23</code>
-          <diff>3</diff>
-          <units>6</units>
-          <offerings>
+				<course>
+					<title>Fundamental Data Structures</title>
+					<code>ICS23</code>
+                                        <diff>3</diff>
+					<units>6</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -505,18 +505,18 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>ICS22</course_code>
-          </prereqs>
-        </course>
+					</offerings>
+					<prereqs>
+						<course_code>ICS22</course_code>
+					</prereqs>
+				</course>
 
-        <course>
-          <title>Computing Tools </title>
-          <code>CSE25</code>
-          <diff>3</diff>
-          <units>6</units>
-          <offerings>
+				<course>
+					<title>Intro to Computer Organization</title>
+					<code>ICS51</code>
+                                        <diff>3</diff>
+					<units>6</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -537,19 +537,19 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            
-            
-          </prereqs>
-        </course>
+					</offerings>
+					<prereqs>
+						<course_code>ICS6B</course_code>
+						<course_code>ICS21</course_code>
+					</prereqs>
+				</course>
 
-        <course>
-          <title>Introduction to Digital Logic Laboratory </title>
-          <code>CSE31</code>
-          <diff>3</diff>
-          <units>7</units>
-          <offerings>
+				<course>
+					<title>Intro to Software Engineering</title>
+					<code>ICS52</code>
+                                        <diff>3</diff>
+					<units>6</units>
+					<offerings>
             <term_id>2</term_id>
             <term_id>3</term_id>
 
@@ -569,463 +569,25 @@
             <term_id>18</term_id>
 
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>ICS23</course_code>
-          </prereqs>
-        </course>
-
-        <course>
-          <title>Network Analysis I </title>
-          <code>CSE70A</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-            <term_id>2</term_id>
-            <term_id>3</term_id>
-
-            <term_id>5</term_id>
-            <term_id>6</term_id>
-
-            <term_id>8</term_id>
-            <term_id>9</term_id>
-
-            <term_id>11</term_id>
-            <term_id>12</term_id>
-
-            <term_id>14</term_id>
-            <term_id>15</term_id>
-
-            <term_id>17</term_id>
-            <term_id>18</term_id>
-
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>Physics3A</course_code>
-          </prereqs>
-        </course>
-
-        <course>
-          <title>Systems Engineering and Technical Communications </title>
-          <code>CSE90</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-            <term_id>2</term_id>
-            <term_id>3</term_id>
-
-            <term_id>5</term_id>
-            <term_id>6</term_id>
-
-            <term_id>8</term_id>
-            <term_id>9</term_id>
-
-            <term_id>11</term_id>
-            <term_id>12</term_id>
-
-            <term_id>14</term_id>
-            <term_id>15</term_id>
-
-            <term_id>17</term_id>
-            <term_id>18</term_id>
-
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>Physics3A</course_code>
-          </prereqs>
-        </course>
-        
-        <course>
-          <title>Organization of Digital Computers</title>
-          <code>CSE132</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-
-            <term_id>2</term_id>
-            <term_id>5</term_id>
-            <term_id>8</term_id>
-            <term_id>11</term_id>
-            <term_id>14</term_id>
-            <term_id>17</term_id>
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>CSE31</course_code>
-          </prereqs>
-        </course>
-
-        <course>
-          <title>Principles of Operating Systems</title>
-          <code>CS143A</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-            <term_id>2</term_id>
-            <term_id>3</term_id>
-
-            <term_id>5</term_id>
-            <term_id>6</term_id>
-
-            <term_id>8</term_id>
-            <term_id>9</term_id>
-
-            <term_id>11</term_id>
-            <term_id>12</term_id>
-
-            <term_id>14</term_id>
-            <term_id>15</term_id>
-
-            <term_id>17</term_id>
-            <term_id>18</term_id>
-
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>ICS51</course_code>
-            <course_code>ICS23</course_code>
-          </prereqs>
-        </course>
-
-        <course>
-          <title>Electronic Devices and Circuits</title>
-          <code>CSE112</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-            <term_id>2</term_id>
-            <term_id>3</term_id>
-
-            <term_id>5</term_id>
-            <term_id>6</term_id>
-
-            <term_id>8</term_id>
-            <term_id>9</term_id>
-
-            <term_id>11</term_id>
-            <term_id>12</term_id>
-
-            <term_id>14</term_id>
-            <term_id>15</term_id>
-
-            <term_id>17</term_id>
-            <term_id>18</term_id>
-
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>Physics3A</course_code>
-            <course_code>CSE70A</course_code>
-          </prereqs>
-        </course>
-
-        <course>
-          <title>Discrete-Time Signals and Systems</title>
-          <code>CSE120A</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-            <term_id>2</term_id>
-            <term_id>3</term_id>
-
-            <term_id>5</term_id>
-            <term_id>6</term_id>
-
-            <term_id>8</term_id>
-            <term_id>9</term_id>
-
-            <term_id>11</term_id>
-            <term_id>12</term_id>
-
-            <term_id>14</term_id>
-            <term_id>15</term_id>
-
-            <term_id>17</term_id>
-            <term_id>18</term_id>
-
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>CSE70A</course_code>
-          </prereqs>
-        </course>
-
-        <course>
-          <title>Software Tools and Methods</title>
-          <code>IN4MATX111</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-            <term_id>1</term_id>
-            <term_id>2</term_id>
-
-            <term_id>4</term_id>
-            <term_id>5</term_id>
-
-            <term_id>7</term_id>
-            <term_id>8</term_id>
-
-            <term_id>10</term_id>
-            <term_id>11</term_id>
-
-            <term_id>13</term_id>
-            <term_id>14</term_id>
-
-            <term_id>16</term_id>
-            <term_id>17</term_id>
-
-            <term_id>19</term_id>
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>ICS6B</course_code>
-            <course_code>ICS52</course_code>
-          </prereqs>
-        </course>
-
-        <course>
-          <title>Digital Signal Processing I</title>
-          <code>CSE135A</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-
-            <term_id>1</term_id>
-            
-            <term_id>4</term_id>
-            
-            <term_id>7</term_id>
-           
-            <term_id>10</term_id>
-           
-            <term_id>13</term_id>
-           
-            <term_id>16</term_id>
-            
-            <term_id>19</term_id>
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>CSE120A</course_code>
-          </prereqs>
-        </course>
-
-        <course>
-          <title>Digital Signal Processing II</title>
-          <code>CSE135B</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-
-            <term_id>1</term_id>
-
-            <term_id>4</term_id>
-
-            <term_id>7</term_id>
-
-            <term_id>10</term_id>
-
-            <term_id>13</term_id>
-
-            <term_id>16</term_id>
-
-            <term_id>19</term_id>
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>CSE135A</course_code>
-          </prereqs>
-        </course>
-
-        <course>
-          <title>Introduction to VLSI</title>
-          <code>CSE151</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-
-            <term_id>1</term_id>
-
-            <term_id>4</term_id>
-
-            <term_id>7</term_id>
-
-            <term_id>10</term_id>
-
-            <term_id>13</term_id>
-
-            <term_id>16</term_id>
-
-            <term_id>19</term_id>
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>CSE132</course_code>
-            <course_code>CSE112</course_code>
-          </prereqs>
-        </course>
-
-        <course>
-          <title>Senior Design Project I</title>
-          <code>CSE181A</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-
-            <term_id>7</term_id>
-            <term_id>10</term_id>
-            <term_id>13</term_id>
-            <term_id>16</term_id>
-            <term_id>19</term_id>
-          </offerings>
-          <prereqs>
-            
-          </prereqs>
-        </course>
-
-        <course>
-          <title>Senior Design Project II</title>
-          <code>CSE181B</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-
-            <term_id>8</term_id>
-            <term_id>11</term_id>
-            <term_id>14</term_id>
-            <term_id>17</term_id>
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>CSE181A</course_code>
-          </prereqs>
-        </course>
-
-        <course>
-          <title>Senior Design Project III</title>
-          <code>CSE181C</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-
-            <term_id>9</term_id>
-            <term_id>12</term_id>
-            <term_id>15</term_id>
-            <term_id>18</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>CSE181B</course_code>
-          </prereqs>
-        </course>
-
-        <course>
-          
-          <title>Embedded Systems </title>
-          <code>CS145</code>
-          <diff>3</diff>
-          <units>6</units>
-          <offerings>
-
-            <term_id>3</term_id>
-
-            <term_id>6</term_id>
-
-            <term_id>9</term_id>
-
-            <term_id>12</term_id>
-
-            <term_id>15</term_id>
-
-            <term_id>18</term_id>
-
-            
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>ICS23</course_code>
-            <course_code>CSE31</course_code>
-            <course_code>CSE132</course_code>
-          </prereqs>
-        </course>
-          
-          
-        
-
-        <course>
-          <title>Concepts in Programming Languages</title>
-          <code>CS141</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-            <term_id>2</term_id>
-            <term_id>3</term_id>
-
-            <term_id>5</term_id>
-            <term_id>6</term_id>
-
-            <term_id>8</term_id>
-            <term_id>9</term_id>
-
-            <term_id>11</term_id>
-            <term_id>12</term_id>
-
-            <term_id>14</term_id>
-            <term_id>15</term_id>
-
-            <term_id>17</term_id>
-            <term_id>18</term_id>
-
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>ICS51</course_code>
-            <course_code>ICS23</course_code>
-          </prereqs>
-        </course>
-        
-       
-
-        <course>
-          <title>Compilers and Interpreters</title>
-          <code>CS142A</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-            <term_id>1</term_id>
-
-            <term_id>3</term_id>
-
-            <term_id>5</term_id>
-
-            <term_id>7</term_id>
-
-            <term_id>9</term_id>
-
-            <term_id>11</term_id>
-
-            <term_id>13</term_id>
-
-            <term_id>15</term_id>
-
-            <term_id>17</term_id>
-
-            <term_id>19</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>CS141</course_code>
-          </prereqs>
-        </course>
-
-       
-
-        <course>
-          <title>Design and Analysis of Algorithms</title>
-          <code>CS161</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
+					</offerings>
+					<prereqs>
+						<course_code>ICS23</course_code>
+					</prereqs>
+				</course>
+			</courses>
+		</course_group>
+
+		<course_group>
+			<title>CS Lower Division Math</title>
+			<num_courses_required>7</num_courses_required>
+			<courses>
+
+				<course>
+					<title>Calculus</title>
+					<code>MATH2A</code>
+                                        <diff>3</diff>
+					<units>4</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -1046,34 +608,17 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>ICS23</course_code>
-            <course_code>ICS51</course_code>
-            <course_code>ICS6D</course_code>
-            <course_code>ICS6B</course_code>
-            <course_code>MATH2B</course_code>
-            <course_code>MATH6G</course_code>
-          </prereqs>
-        </course>
-        
-        
-        
-      </courses>
-    </course_group>
+					</offerings>
+					<prereqs>
+					</prereqs>
+				</course>
 
-    <course_group>
-      <title>CS Lower Division Math</title>
-      <num_courses_required>7</num_courses_required>
-      <courses>
-      
-
-        <course>
-          <title>Calculus</title>
-          <code>MATH2A</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
+				<course>
+					<title>Calculus</title>
+					<code>MATH2B</code>
+                                        <diff>3</diff>
+					<units>4</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -1094,17 +639,18 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-          </prereqs>
-        </course>
+					</offerings>
+					<prereqs>
+						<course_code>MATH2A</course_code>
+					</prereqs>
+				</course>
 
-        <course>
-          <title>Calculus</title>
-          <code>MATH2B</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
+				<course>
+					<title>Boolean Algebra and Symbolic Logic</title>
+					<code>ICS6B</code>
+                                        <diff>3</diff>
+					<units>4</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -1125,18 +671,47 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>MATH2A</course_code>
-          </prereqs>
-        </course>
+					</offerings>
+					<prereqs>
+					</prereqs>
+				</course>
 
-        <course>
-          <title>Boolean Algebra and Symbolic Logic</title>
-          <code>ICS6B</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
+				<course>
+					<title>Discrete Math for CS</title>
+					<code>ICS6D</code>
+                                        <diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>2</term_id>
+            <term_id>3</term_id>
+
+            <term_id>5</term_id>
+            <term_id>6</term_id>
+
+            <term_id>8</term_id>
+            <term_id>9</term_id>
+
+            <term_id>11</term_id>
+            <term_id>12</term_id>
+
+            <term_id>14</term_id>
+            <term_id>15</term_id>
+
+            <term_id>17</term_id>
+            <term_id>18</term_id>
+
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Linear Algebra</title>
+					<code>MATH6G</code>
+                                        <diff>3</diff>
+					<units>4</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -1157,47 +732,17 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-          </prereqs>
-        </course>
+					</offerings>
+					<prereqs>
+					</prereqs>
+				</course>
 
-        <course>
-          <title>Discrete Math for CS</title>
-          <code>ICS6D</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-            <term_id>2</term_id>
-            <term_id>3</term_id>
-
-            <term_id>5</term_id>
-            <term_id>6</term_id>
-
-            <term_id>8</term_id>
-            <term_id>9</term_id>
-
-            <term_id>11</term_id>
-            <term_id>12</term_id>
-
-            <term_id>14</term_id>
-            <term_id>15</term_id>
-
-            <term_id>17</term_id>
-            <term_id>18</term_id>
-
-            <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-          </prereqs>
-        </course>
-
-        <course>
-          <title>Linear Algebra</title>
-          <code>MATH6G</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
+				<course>
+					<title>Symbolic Logic</title>
+					<code>PHIL29</code>
+                                        <diff>2</diff>
+					<units>4</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -1218,17 +763,19 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-          </prereqs>
-        </course>
+					</offerings>
+					<prereqs>
+					</prereqs>
+				</course>
 
-        <course>
-          <title>Symbolic Logic</title>
-          <code>PHIL29</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
+
+
+				<course>
+					<title>Intro to Prob and Stats for CS</title>
+					<code>MATH67</code>
+                                        <diff>3</diff>
+					<units>4</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -1249,19 +796,26 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-          </prereqs>
-        </course>
+					</offerings>
+					<prereqs>
+						<course_code>MATH2B</course_code>
+						<course_code>ICS6D</course_code>
+					</prereqs>
+				</course>
+			</courses>
+		</course_group>
 
+		<course_group>
+			<title> CS lower Division Science Core  </title>
+			<num_courses_required>3</num_courses_required>
+			<courses>
 
-
-        <course>
-          <title>Intro to Prob and Stats for CS</title>
-          <code>MATH67</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
+				<course>
+					<title>Basic Physics I</title>
+					<code>Physics3A</code>
+                                        <diff>3</diff>
+					<units>4</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -1282,26 +836,18 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>MATH2B</course_code>
-            <course_code>ICS6D</course_code>
-          </prereqs>
-        </course>
-      </courses>
-    </course_group>
+					</offerings>
+					<prereqs>
+						<course_code>MATH2A</course_code>
+					</prereqs>
+				</course>
 
-    <course_group>
-      <title> CS lower Division Science Core  </title>
-      <num_courses_required>3</num_courses_required>
-      <courses>
-
-        <course>
-        <diff>3</diff>
-          <title>Basic Physics I</title>
-          <code>Physics3A</code>
-          <units>4</units>
-          <offerings>
+				<course>
+					<title>Basic Physics II</title>
+					<code>Physics3B</code>
+                                        <diff>3</diff>
+					<units>4</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -1322,19 +868,18 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>MATH2A</course_code>
-          </prereqs>
-        </course>
+					</offerings>
+					<prereqs>
+						<course_code>Physics3A</course_code>
+					</prereqs>
+				</course>
 
-        <course>
-        <diff>3</diff>
-          <title>Basic Physics II</title>
-          <code>Physics3B</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
+				<course>
+					<title>Basic Physics III</title>
+					<code>Physics3C</code>
+                                        <diff>3</diff>
+					<units>4</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -1355,18 +900,36 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>Physics3A</course_code>
-          </prereqs>
-        </course>
+					</offerings>
+					<prereqs>
+						<course_code>Physics3B</course_code>
+					</prereqs>
+				</course>
 
-        <course>
-          <title>Basic Physics III</title>
-          <code>Physics3C</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
+			</courses>
+		</course_group>
+
+
+
+
+
+
+
+
+
+
+
+		<course_group>
+			<title>CS Upper Division Core I</title>
+			<num_courses_required>8</num_courses_required>
+			<courses>
+
+				<course>
+					<title>Computer Networks</title>
+					<code>CS132</code>
+                                        <diff>3</diff>
+					<units>4</units>
+					<offerings>
             <term_id>1</term_id>
             <term_id>2</term_id>
             <term_id>3</term_id>
@@ -1387,17 +950,15 @@
             <term_id>18</term_id>
             <term_id>19</term_id>
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>Physics3B</course_code>
-          </prereqs>
-        </course>
-
-      </courses>
-    </course_group>
-
-
-
+					</offerings>
+					<prereqs>
+						<course_code>ICS23</course_code>
+						<course_code>ICS51</course_code>
+						<course_code>ICS6B</course_code>
+						<course_code>ICS6D</course_code>
+						<course_code>MATH67</course_code>
+					</prereqs>
+				</course>
 
 
 
@@ -1405,89 +966,12 @@
 
 
 
-
-    <course_group>
-      <title>CSE Upper Division Specialization</title>
-      <num_courses_required>2</num_courses_required>
-      <courses>
-
-        
-
-        <course>
-          <title>Intro to Artificial Intelligence</title>
-          <code>CS171</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
-            <term_id>1</term_id>
-
-            <term_id>3</term_id>
-
-            <term_id>5</term_id>
-
-            <term_id>7</term_id>
-
-            <term_id>9</term_id>
-
-            <term_id>11</term_id>
-
-            <term_id>13</term_id>
-
-            <term_id>15</term_id>
-
-            <term_id>17</term_id>
-
-            <term_id>19</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>ICS23</course_code>
-            <course_code>MATH2A</course_code>
-            <course_code>MATH2B</course_code>
-            <course_code>MATH67</course_code>
-          </prereqs>
-        </course>
-        
-        
-
-       
-        
-    
-
-
-
-    
-       
-
-        
-
-      
-
-
-    
-
-
-       
-        
-
-        
-
-       
-
-        
-
-       
-
-
-
-        
-
-
-        <course>
-          <title>Project in Artificial Intelligence </title>
-          <code>CS175</code>
-          <diff>3</diff>
-          <units>4</units>
-          <offerings>
+				<course>
+					<title>Concepts in Programming Languages</title>
+					<code>CS141</code>
+                                        <diff>3</diff>
+					<units>4</units>
+					<offerings>
             <term_id>2</term_id>
             <term_id>3</term_id>
 
@@ -1507,85 +991,927 @@
             <term_id>18</term_id>
 
             <term_id>20</term_id>
-          </offerings>
-          <prereqs>
-            <course_code>CS171</course_code>
-          </prereqs>
-        </course>
-      </courses>
-    </course_group>
+					</offerings>
+					<prereqs>
+						<course_code>ICS51</course_code>
+						<course_code>ICS23</course_code>
+					</prereqs>
+				</course>
 
-   
+				<course>
+					<title>Compilers and Interpreters</title>
+					<code>CS142A</code>
+					<units>4</units>
+					<offerings>
+            <term_id>1</term_id>
 
-<course_group>
-<title>CSE Electives</title>
-<num_courses_required>0</num_courses_required>
-<courses>
-	<course>
-			<title>Intro to Computer Organization</title>
-			<code>ICS51</code>
-			<diff>3</diff>
-			<units>6</units>
-			<offerings>
-        <term_id>1</term_id>
-        <term_id>2</term_id>
+            <term_id>3</term_id>
+
+            <term_id>5</term_id>
+
+            <term_id>7</term_id>
+
+            <term_id>9</term_id>
+
+            <term_id>11</term_id>
+
+            <term_id>13</term_id>
+
+            <term_id>15</term_id>
+
+            <term_id>17</term_id>
+
+            <term_id>19</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS141</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Principles of Operating Systems</title>
+					<code>CS143A</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>2</term_id>
+            <term_id>3</term_id>
+
+            <term_id>5</term_id>
+            <term_id>6</term_id>
+
+            <term_id>8</term_id>
+            <term_id>9</term_id>
+
+            <term_id>11</term_id>
+            <term_id>12</term_id>
+
+            <term_id>14</term_id>
+            <term_id>15</term_id>
+
+            <term_id>17</term_id>
+            <term_id>18</term_id>
+
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS51</course_code>
+						<course_code>ICS23</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Design and Analysis of Algorithms</title>
+					<code>CS161</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>1</term_id>
+            <term_id>2</term_id>
+            <term_id>3</term_id>
+            <term_id>4</term_id>
+            <term_id>5</term_id>
+            <term_id>6</term_id>
+            <term_id>7</term_id>
+            <term_id>8</term_id>
+            <term_id>9</term_id>
+            <term_id>10</term_id>
+            <term_id>11</term_id>
+            <term_id>12</term_id>
+            <term_id>13</term_id>
+            <term_id>14</term_id>
+            <term_id>15</term_id>
+            <term_id>16</term_id>
+            <term_id>17</term_id>
+            <term_id>18</term_id>
+            <term_id>19</term_id>
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS23</course_code>
+						<course_code>ICS51</course_code>
+						<course_code>ICS6D</course_code>
+						<course_code>ICS6B</course_code>
+						<course_code>MATH2B</course_code>
+						<course_code>MATH6G</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Intro to Artificial Intelligence</title>
+					<code>CS171</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>1</term_id>
+
+            <term_id>3</term_id>
+
+            <term_id>5</term_id>
+
+            <term_id>7</term_id>
+
+            <term_id>9</term_id>
+
+            <term_id>11</term_id>
+
+            <term_id>13</term_id>
+
+            <term_id>15</term_id>
+
+            <term_id>17</term_id>
+
+            <term_id>19</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS23</course_code>
+						<course_code>MATH2A</course_code>
+						<course_code>MATH2B</course_code>
+						<course_code>MATH67</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Digital Logic Design</title>
+					<code>CS151</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>1</term_id>
+            <term_id>2</term_id>
+
+            <term_id>4</term_id>
+            <term_id>5</term_id>
+
+            <term_id>7</term_id>
+            <term_id>8</term_id>
+
+            <term_id>10</term_id>
+            <term_id>11</term_id>
+
+            <term_id>13</term_id>
+            <term_id>14</term_id>
+
+            <term_id>16</term_id>
+            <term_id>17</term_id>
+
+            <term_id>19</term_id>
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS51</course_code>
+						<course_code>ICS6B</course_code>
+						<course_code>ICS6D</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Computer Systems Architecture</title>
+					<code>CS152</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+
+            <term_id>2</term_id>
+
+            <term_id>4</term_id>
+
+            <term_id>6</term_id>
+
+            <term_id>8</term_id>
+
+            <term_id>10</term_id>
+
+            <term_id>12</term_id>
+
+            <term_id>14</term_id>
+
+            <term_id>16</term_id>
+
+            <term_id>18</term_id>
+
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS151</course_code>
+					</prereqs>
+				</course>
+			</courses>
+		</course_group>
+
+
+
+		<course_group>
+			<title>CS UPPER DIVISION CORE II</title>
+			<num_courses_required>1</num_courses_required>
+			<courses>
+
+				<course>
+					<title>Formal Language and Automata</title>
+					<code>CS162</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+						<term_id>1</term_id>
+
         <term_id>3</term_id>
-        <term_id>4</term_id>
+
         <term_id>5</term_id>
-        <term_id>6</term_id>
+
         <term_id>7</term_id>
-        <term_id>8</term_id>
+
         <term_id>9</term_id>
-        <term_id>10</term_id>
+
         <term_id>11</term_id>
-        <term_id>12</term_id>
+
         <term_id>13</term_id>
-        <term_id>14</term_id>
+
         <term_id>15</term_id>
-        <term_id>16</term_id>
+
         <term_id>17</term_id>
-        <term_id>18</term_id>
+
         <term_id>19</term_id>
-        <term_id>20</term_id>
-			</offerings>
-			<prereqs>
-				<course_code>ICS6B</course_code>
-				<course_code>ICS21</course_code>
-			</prereqs>
-		</course>
-	<course>
-			<title>Intro to Software Engineering</title>
-			<code>ICS52</code>
-			<diff>3</diff>
-			<units>6</units>
-			<offerings>
+					</offerings>
+					<prereqs>
+						<course_code>ICS51</course_code>
+						<course_code>ICS6B</course_code>
+						<course_code>ICS6D</course_code>
+						<course_code>MATH6G</course_code>
+						<course_code>MATH67</course_code>
+						<course_code>MATH2B</course_code>
+						<course_code>ICS23</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Graph Algorithms</title>
+					<code>CS163</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>1</term_id>
+
+            <term_id>3</term_id>
+
+            <term_id>5</term_id>
+
+            <term_id>7</term_id>
+
+            <term_id>9</term_id>
+
+            <term_id>11</term_id>
+
+            <term_id>13</term_id>
+
+            <term_id>15</term_id>
+
+            <term_id>17</term_id>
+
+            <term_id>19</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS161</course_code>
+
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Computational Geography</title>
+					<code>CS164</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+						
+						<term_id>3</term_id>
         
-        <term_id>2</term_id>
-        <term_id>3</term_id>
-        
-        <term_id>5</term_id>
         <term_id>6</term_id>
         
-        <term_id>8</term_id>
         <term_id>9</term_id>
         
-        <term_id>11</term_id>
         <term_id>12</term_id>
         
-        <term_id>14</term_id>
         <term_id>15</term_id>
-       
-        <term_id>17</term_id>
+        
         <term_id>18</term_id>
         
         <term_id>20</term_id>
-			</offerings>
-			<prereqs>
-				<course_code>ICS23</course_code>
-			</prereqs>
-		</course>
-</courses>
-</course_group>
+					</offerings>
+					<prereqs>
+						<course_code>ICS23</course_code>
 
-  </groups>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Applied Cryptography</title>
+					<code>CS167</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>3</term_id>
+
+            <term_id>6</term_id>
+
+            <term_id>9</term_id>
+
+            <term_id>12</term_id>
+
+            <term_id>15</term_id>
+
+            <term_id>18</term_id>
+
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS22</course_code>
+						<course_code>ICS6D</course_code>
+						<course_code>CS161</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Intro to Optimization</title>
+					<code>CS169</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+           
+            <term_id>3</term_id>
+            
+            <term_id>6</term_id>
+            
+            <term_id>9</term_id>
+           
+            <term_id>12</term_id>
+           
+            <term_id>15</term_id>
+           
+            <term_id>18</term_id>
+           
+					</offerings>
+					<prereqs>
+						<course_code>ICS22</course_code>
+						<course_code>ICS6D</course_code>
+						<course_code>CS161</course_code>
+					</prereqs>
+				</course>
+
+			</courses>
+		</course_group>
+
+
+		<course_group>
+			<title>CS Project Course Requirement</title>
+			<num_courses_required>3</num_courses_required>
+			<courses>
+
+				<course>
+					<title>Computer Game Development</title>
+					<code>CS113</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>1</term_id>
+           
+            <term_id>4</term_id>
+           
+            <term_id>7</term_id>
+            
+            <term_id>10</term_id>
+           
+            <term_id>13</term_id>
+           
+            <term_id>16</term_id>
+           
+            <term_id>19</term_id>
+           
+					</offerings>
+					<prereqs>
+						
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Advanced Graphics </title>
+					<code>CS114</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            
+            <term_id>3</term_id>
+           
+            <term_id>6</term_id>
+            
+            <term_id>9</term_id>
+           
+            <term_id>12</term_id>
+            
+            <term_id>15</term_id>
+           
+            <term_id>18</term_id>
+           
+					</offerings>
+					<prereqs>
+						<course_code>CS112</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Proj Data and Web Apps</title>
+					<code>CS122B</code>
+                                        <diff>3</diff>
+					<units>4</units>
+					<offerings>
+            
+            <term_id>2</term_id>
+            <term_id>3</term_id>
+            
+            <term_id>5</term_id>
+            <term_id>6</term_id>
+            
+            <term_id>8</term_id>
+            <term_id>9</term_id>
+           
+            <term_id>11</term_id>
+            <term_id>12</term_id>
+            
+            <term_id>14</term_id>
+            <term_id>15</term_id>
+            
+            <term_id>17</term_id>
+            <term_id>18</term_id>
+           
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS122A</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Advanced Computer Networks</title>
+					<code>CS133</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>2</term_id>
+            <term_id>3</term_id>
+
+            <term_id>5</term_id>
+            <term_id>6</term_id>
+
+            <term_id>8</term_id>
+            <term_id>9</term_id>
+
+            <term_id>11</term_id>
+            <term_id>12</term_id>
+
+            <term_id>14</term_id>
+            <term_id>15</term_id>
+
+            <term_id>17</term_id>
+            <term_id>18</term_id>
+
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS132</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Language Proccesor Construction</title>
+					<code>CS142B</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>2</term_id>
+            <term_id>3</term_id>
+
+            <term_id>5</term_id>
+            <term_id>6</term_id>
+
+            <term_id>8</term_id>
+            <term_id>9</term_id>
+
+            <term_id>11</term_id>
+            <term_id>12</term_id>
+
+            <term_id>14</term_id>
+            <term_id>15</term_id>
+
+            <term_id>17</term_id>
+            <term_id>18</term_id>
+
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS142A</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Project in Operating Systems</title>
+					<code>CS143B</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>2</term_id>
+            <term_id>3</term_id>
+
+            <term_id>5</term_id>
+            <term_id>6</term_id>
+
+            <term_id>8</term_id>
+            <term_id>9</term_id>
+
+            <term_id>11</term_id>
+            <term_id>12</term_id>
+
+            <term_id>14</term_id>
+            <term_id>15</term_id>
+
+            <term_id>17</term_id>
+            <term_id>18</term_id>
+
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS143A</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Digital Logic Design Lab</title>
+					<code>CS153</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            
+            <term_id>2</term_id>
+           
+            <term_id>4</term_id>
+            
+            <term_id>6</term_id>
+           
+            <term_id>8</term_id>
+            
+            <term_id>10</term_id>
+            
+            <term_id>12</term_id>
+            
+            <term_id>14</term_id>
+           
+            <term_id>16</term_id>
+            
+            <term_id>18</term_id>
+            
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS151</course_code>
+					</prereqs>
+				</course>
+
+
+
+				<course>
+					<title>Computer Design Lab</title>
+					<code>CS154</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>2</term_id>
+            <term_id>3</term_id>
+
+            <term_id>5</term_id>
+            <term_id>6</term_id>
+
+            <term_id>8</term_id>
+            <term_id>9</term_id>
+
+            <term_id>11</term_id>
+            <term_id>12</term_id>
+
+            <term_id>14</term_id>
+            <term_id>15</term_id>
+
+            <term_id>17</term_id>
+            <term_id>18</term_id>
+
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS151</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Project in Algorithums and Data Structures </title>
+					<code>CS165</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>3</term_id>
+
+            <term_id>6</term_id>
+
+            <term_id>9</term_id>
+
+            <term_id>12</term_id>
+
+            <term_id>15</term_id>
+
+            <term_id>18</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS161</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Project in Artificial Intelligence </title>
+					<code>CS175</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>2</term_id>
+            <term_id>3</term_id>
+
+            <term_id>5</term_id>
+            <term_id>6</term_id>
+
+            <term_id>8</term_id>
+            <term_id>9</term_id>
+
+            <term_id>11</term_id>
+            <term_id>12</term_id>
+
+            <term_id>14</term_id>
+            <term_id>15</term_id>
+
+            <term_id>17</term_id>
+            <term_id>18</term_id>
+
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS171</course_code>
+					</prereqs>
+				</course>
+			</courses>
+		</course_group>
+
+		<course_group>
+			<title>Computer Science Electives</title>
+			<num_courses_required>2</num_courses_required>
+			<courses>
+
+				<course>
+					<title> Graphics </title>
+					<code>CS112</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>1</term_id>
+            <term_id>2</term_id>
+            
+            <term_id>4</term_id>
+            <term_id>5</term_id>
+            
+            <term_id>7</term_id>
+            <term_id>8</term_id>
+            
+            <term_id>10</term_id>
+            <term_id>11</term_id>
+            
+            <term_id>13</term_id>
+            <term_id>14</term_id>
+            
+            <term_id>16</term_id>
+            <term_id>17</term_id>
+            
+            <term_id>19</term_id>
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS22</course_code>
+					</prereqs>
+				</course>
+
+				
+        
+				<course>
+					<title>Software Testing and QA</title>
+					<code>IN4MATX115</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>3</term_id>
+
+            <term_id>6</term_id>
+
+            <term_id>9</term_id>
+
+            <term_id>12</term_id>
+
+            <term_id>15</term_id>
+
+            <term_id>18</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS6B</course_code>
+						<course_code>ICS52</course_code>
+					</prereqs>
+				</course>
+
+
+
+				<course>
+					<title>Software Architectures</title>
+					<code>IN4MATX123</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>3</term_id>
+
+            <term_id>6</term_id>
+
+            <term_id>9</term_id>
+
+            <term_id>12</term_id>
+
+            <term_id>15</term_id>
+
+            <term_id>18</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>CS141</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Social Analysis of Computerization</title>
+					<code>IN4MATX161</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>1</term_id>
+
+            <term_id>3</term_id>
+
+            <term_id>5</term_id>
+
+            <term_id>7</term_id>
+
+            <term_id>9</term_id>
+
+            <term_id>11</term_id>
+
+            <term_id>13</term_id>
+
+            <term_id>15</term_id>
+
+            <term_id>17</term_id>
+
+            <term_id>19</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS21</course_code>
+					</prereqs>
+				</course>
+
+				<course>
+					<title>Human Computer Interaction</title>
+					<code>IN4MATX131</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>2</term_id>
+           
+
+            <term_id>5</term_id>
+            
+
+            <term_id>8</term_id>
+            
+
+            <term_id>11</term_id>
+           
+
+            <term_id>14</term_id>
+            
+
+            <term_id>17</term_id>
+            
+
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS21</course_code>
+					</prereqs>
+				</course>
+
+
+
+
+				<course>
+					<title>Computer and Network Security</title>
+					<code>CS134</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>3</term_id>
+
+            <term_id>6</term_id>
+
+            <term_id>9</term_id>
+
+            <term_id>12</term_id>
+
+            <term_id>15</term_id>
+
+            <term_id>18</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>ICS6D</course_code>
+						<course_code>ICS22</course_code>
+						<course_code>CS143A</course_code>
+					</prereqs>
+				</course>
+
+
+
+				<course>
+					<title>Project in Social Impact of Computing</title>
+					<code>IN4MATX163</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            <term_id>1</term_id>
+
+            <term_id>3</term_id>
+
+            <term_id>5</term_id>
+
+            <term_id>7</term_id>
+
+            <term_id>9</term_id>
+
+            <term_id>11</term_id>
+
+            <term_id>13</term_id>
+
+            <term_id>15</term_id>
+
+            <term_id>17</term_id>
+
+            <term_id>19</term_id>
+					</offerings>
+					<prereqs>
+						<course_code>IN4MATX131</course_code>
+					</prereqs>
+				</course>
+
+
+
+		
+			
+				
+				<course>
+					<title>Intro to Data Management</title>
+					<code>CS122A</code>
+<diff>3</diff>
+					<units>4</units>
+					<offerings>
+            
+            <term_id>2</term_id>
+            <term_id>3</term_id>
+            
+            <term_id>5</term_id>
+            <term_id>6</term_id>
+            
+            <term_id>8</term_id>
+            <term_id>9</term_id>
+            
+            <term_id>11</term_id>
+            <term_id>12</term_id>
+            
+            <term_id>14</term_id>
+            <term_id>15</term_id>
+           
+            <term_id>17</term_id>
+            <term_id>18</term_id>
+            
+            <term_id>20</term_id>
+					</offerings>
+					<prereqs>
+						
+					</prereqs>
+				</course>
+				
+			</courses>
+		</course_group>
+		
+	</groups>
 </major_requirements>
