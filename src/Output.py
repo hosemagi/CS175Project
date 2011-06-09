@@ -34,6 +34,11 @@ class Outputter:
             print coursesForTerm
             if self.TermDifficulty is not None:
                 print "Difficulty: " + str(self.TermDifficulty[i].get_value(self.solver))
+                termUnits = 0
+                for j in range(len(self.terms[i-1])):
+                    termUnits += int(self.terms[i-1][j].units)
+                print "Units: " + str(termUnits)
+            
     
     # writes results as XML objects to output stream for use by UI
     def outputXML(self):
@@ -58,6 +63,11 @@ class Outputter:
             text = xmldoc.createTextNode(str(i))
             termNumberElement.appendChild(text)
             termElement.appendChild(termNumberElement)
+
+            termDifficultyElement = xmldoc.createElementNS(None, "term_difficulty")
+            text = xmldoc.createTextNode(str(self.TermDifficulty[i+1]))
+            termDifficultyElement.appendChild(text)
+            termElement.appendChild(termDifficultyElement)
             
             coursesElement = xmldoc.createElementNS(None, "courses")
             termElement.appendChild(coursesElement)
@@ -87,23 +97,6 @@ class Outputter:
                 
             resultsElement.appendChild(termElement)
         
-        xmlstr = xmldoc.toxml('utf-8')
-        #xmlstr = xmldoc.toprettyxml()
+        #xmlstr = xmldoc.toxml('utf-8')
+        xmlstr = xmldoc.toprettyxml()
         print xmlstr
-        
-        #f = open('utf_test.xml', 'w')
-        #f.write(xmlstr)
-        #f.close()
-        #print "utf_test.xml".encode('utf_8')
-     
-    #def jsonRepresentation(self):
-    #    d = dict()
-    #    d['terms_to_complete'] = self.maxTerm
-    #    d['terms'] = []
-    #    for i in range(len(self.terms)):
-    #        term = [course.__dict__ for course in self.terms[i]]
-    #        d['terms'].append(term)
-    #    d['starting_term_year'] = self.startingTermYear
-    #    d['starting_term_quarter'] = self.startingTermTerm 
-    #    return d
-        

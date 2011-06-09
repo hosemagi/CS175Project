@@ -19,6 +19,7 @@ max_term_units = 20               # the maximum number of units to schedule in a
 preferredCourses = []               # a list of courses that the user wishes to include in the plan
 optimizeTimeToCompletion = False    # if this is false, we will use a heuristic method instead to find a reasonable time to completion
 optimizeTotalDifficulty = False     # if this is false, we will use a heuristic method instead to find a reasonable overall difficulty rating
+difficultyThreshold = "very hard"
 
 TermDifficulty = None
 
@@ -100,7 +101,7 @@ def generateSchedule(majorName, max_term_units, preferredCourses):
     # CONSTRAINT: MAX UNIT LOAD IS ENFORCED FOR EACH TERM
     # Note: if we have chosen not to minimize the term to completion and use a heuristic instead,
     # this constraint will be set later
-    if not optimizeTimeToCompletion:
+    if optimizeTimeToCompletion:
         # for each possible term
         for term in range(1, len(courseTerms)):
             # the sum of courses scheduled for the current term must be <= the max allowed in a single term
@@ -134,18 +135,49 @@ def generateSchedule(majorName, max_term_units, preferredCourses):
             min_term_units = 16
         elif max_term_units > 12:
             min_term_units = 12
-        model.add(min_term_units <= sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) <= max_term_units)
+        for term in range(1, 20):
+            model.add(min_term_units <= sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) <= max_term_units)
     
-    # OPTIMIZATION: FIND 
-    #TermDifficulty = VarArray(len(major.courses), 0, 0)
-    #if optimizeTotalDifficulty:
-    #    TermDifficulty = VarArray(len(major.courses), 0, 15)
-    #    for term in range(len(TermDifficulty)):
+    # OPTIMIZATION: MINIMIZE OVERALL DIFFICULTY
+    TermDifficulty = VarArray(len(major.courses), 0, 20)
+    
+    #define TermDifficulty in the constraint network 
+    for term in range(1, 20):
+        model.add(TermDifficulty[term] == sum([(int(major.courses[i].diff) * (courseTerms[i] == term)) for i in range(len(courseTerms))]))
+    
+    # check optimize vs heuristic
+    if optimizeTotalDifficulty:
+        for term in range(len(TermDifficulty)):
             # add the constraint that the value of the TermDifficulty[i] must be the sum
             # of difficulty ratings for term [i]
-    #        model.add(TermDifficulty[term] == sum([(int(major.courses[i].diff) * (courseTerms[i] == term)) for i in range(len(courseTerms))]))
-    #    model.add(Minimize(Sum(TermDifficulty)))
-    
+            model.add(Minimize(Sum(TermDifficulty)))
+    else:
+        # if we have chosen not to optimize the difficulty, use a heuristic instead
+        # we'll define the difficulty heuristic as a constraint that ensures no single term
+        # is above a difficulty threshold, where a term's difficulty is the sum of the difficulties
+        # of the courses scheduled for that term
+        # the user is allowed to configure this threshold from the UI, with 5 options:
+        #    very easy:     total term difficulty <= 5 NOTE: removed as an option, infeasible for a full-time student
+        #         easy:     total term difficulty < 7.5
+        #        medium:    total term difficulty <= 10
+        #        hard:      total term difficulty < 12.5
+        #      very hard:    total term difficulty <= 15
+        maxDifficulty = 0
+        #if difficultyThreshold == "very easy":
+        #    maxDifficulty = 5
+        if difficultyThreshold == "easy":
+            maxDifficulty = 7
+        elif difficultyThreshold == "medium":
+            maxDifficulty = 10
+        elif difficultyThreshold == "hard":
+            maxDifficulty = 12
+        elif difficultyThreshold == "very hard":
+            maxDifficulty = 15
+        else:
+            maxDifficulty = 10 # default to 'medium' if difficultyThreshold is malformed
+        
+        for term in range(1, 20):
+            model.add(TermDifficulty[term] <= maxDifficulty)
     
     # Solve the Model
     msolver = model.load('Mistral', courseTerms)
@@ -154,26 +186,45 @@ def generateSchedule(majorName, max_term_units, preferredCourses):
     msolver.solve()
     endtime = datetime.now()
     elapsed = endtime - starttime
-    debug_print("Solution took " + str(elapsed))
+    print "Solution took " + str(elapsed)
      
     # debug_print final solution
     #@TODO: this will eventually be formatted output for the php ui script to read       
     outputter = Outputter(major, courseTerms, TermDifficulty, msolver)
-    #outputter.outputXML()
-    outputter.printSchedule()
+    outputter.outputXML()
+    #outputter.printSchedule()
 
 # Parse command-line args from PHP script or other source
 # argv[1] = major
 # argv[2] = max units per term
-# argv[3..n] = preferred course codes
+# argv[3] = difficultyThreshold (from: "easy", "medium", "hard", "very hard")
+# argv[4] = minimize_time to minimize time to completion, false otherwise  (takes forever)
+# argv[5] = minimize_difficulty to minimize total difficulty, false otherwise  (takes forever)
+# argv[6..n] = course preferences, each additional argument must be a valid course code for the
+#                provided major, and will be included in the final schedule
 
 if len(sys.argv) > 1:
     selectedMajor = sys.argv[1]
 
 if len(sys.argv) > 2:
     max_term_units = int(sys.argv[2])
+
+if len(sys.argv) > 3:
+    difficultyThreshold = sys.argv[3]
     
-if(len(sys.argv) > 3):
+if len(sys.argv) > 4:
+    if sys.argv[4] == "minimize_time":
+        optimizeTimeToCompletion = True
+    else:
+        optimizeTimeToCompletion = False
+        
+if len(sys.argv) > 5:
+    if sys.argv[5] == "minimize_difficulty":
+        optimizeTotalDifficulty = True
+    else:
+        optimizeTotalDifficulty = False
+
+if len(sys.argv) > 6:
     for i in range(3, len(sys.argv)):
         courseCode = sys.argv[i]
         preferredCourses.append(courseCode)
@@ -181,15 +232,3 @@ if(len(sys.argv) > 3):
 # Generate a proposed schedule for selected major, or ics if none specified
 generateSchedule(selectedMajor, max_term_units, preferredCourses)
 
-
-# DONT LOOK HERE -- THIS IS WHERE CODE GOES TO DIE
-
-    #debug_print "\n\nDISPLAYING COURSE SELECTION FOR MAJOR " + major.title
-    #for i in range(len(major.courseGroups)):
-    #    debug_print "\n############################"
-    #    courseGroup = major.courseGroups[i]
-    #    debug_print "Classes for course group: " + courseGroup.title
-    #    startIndex = courseGroup.startIndex
-    #    endIndex = startIndex + len(courseGroup.courses)
-    #    for j in range(len(courseGroup.courses)):
-    #        debug_print courseGroup.courses[j].courseCode + ": " + str(courseTerms[startIndex + j].get_value(msolver))
