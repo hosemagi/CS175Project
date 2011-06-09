@@ -20,6 +20,8 @@ preferredCourses = []               # a list of courses that the user wishes to 
 optimizeTimeToCompletion = False    # if this is false, we will use a heuristic method instead to find a reasonable time to completion
 optimizeTotalDifficulty = False     # if this is false, we will use a heuristic method instead to find a reasonable overall difficulty rating
 
+TermDifficulty = None
+
 
 def debug_print(msg):
     if not silent:
@@ -120,17 +122,17 @@ def generateSchedule(majorName, max_term_units, preferredCourses):
         for i in range(len(courseTerms)):
             model.add(courseTerms[i] <= TermsToCompletion)
         model.add(Minimize(TermsToCompletion))
-    #else:
+    else:
         # if we have chosen not to perform a true optimization to minimize the overall time to completion, we can apply the following heuristic
         # choose a minimum number of units to schedule per term based on the maximum, taken as min=ceil((max-1)/4)*4
         # enforce this constraint
-     #   if max_term_units > 16:
-     #       min_term_units = 16
-     #   elif max_term_units > 12:
-     #       min_term_units = 12
-     #   else:
-     #       min_term_units = 8
-     #   model.add(sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) >= min_term_units)
+        if max_term_units > 16:
+            min_term_units = 16
+        elif max_term_units > 12:
+            min_term_units = 12
+        else:
+            min_term_units = 8
+        model.add(sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) >= min_term_units)
     
     # Minimize overall difficulty
     #TermDifficulty = VarArray(len(major.courses), 0, 0)

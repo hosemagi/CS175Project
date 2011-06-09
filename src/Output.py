@@ -32,7 +32,8 @@ class Outputter:
             print "\nTerm " + str(i) + ": "
             coursesForTerm = [str(self.major.courses[j].courseCode) for j in range(len(self.courseTerms)) if (self.courseTerms[j].get_value(self.solver) == i)]
             print coursesForTerm
-            print "Difficulty: " + str(self.TermDifficulty[i].get_value(self.solver))
+            if self.TermDifficulty is not None:
+                print "Difficulty: " + str(self.TermDifficulty[i].get_value(self.solver))
     
     # writes results as XML objects to output stream for use by UI
     def outputXML(self):
