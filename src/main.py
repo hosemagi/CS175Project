@@ -186,7 +186,7 @@ def generateSchedule(majorName, max_term_units, preferredCourses):
     msolver.solve()
     endtime = datetime.now()
     elapsed = endtime - starttime
-    print "Solution took " + str(elapsed)
+    #print "Solution took " + str(elapsed)
      
     # debug_print final solution
     #@TODO: this will eventually be formatted output for the php ui script to read       
@@ -225,7 +225,7 @@ if len(sys.argv) > 5:
         optimizeTotalDifficulty = False
 
 if len(sys.argv) > 6:
-    for i in range(3, len(sys.argv)):
+    for i in range(6, len(sys.argv)):
         courseCode = sys.argv[i]
         preferredCourses.append(courseCode)
 

@@ -54,6 +54,35 @@ class Outputter:
         numTermsElement.appendChild(text)
         resultsElement.appendChild(numTermsElement)
         
+        # write min units node
+        min_units = self.major.minUnits
+        minUnitsElement = xmldoc.createElementNS(None, "min_units")
+        text = xmldoc.createTextNode(str(min_units))
+        minUnitsElement.appendChild(text)
+        resultsElement.appendChild(minUnitsElement)
+        
+        # write total units node
+        total_units = 0
+        for i in range(len(self.courseTerms)):
+            courseIndex = self.courseTerms[i].get_value(self.solver)
+            courseUnits = int(self.major.courses[courseIndex].units)
+            total_units += courseUnits
+        totalUnitsElement = xmldoc.createElementNS(None, "total_units")
+        text = xmldoc.createTextNode(str(total_units))
+        totalUnitsElement.appendChild(text)
+        resultsElement.appendChild(totalUnitsElement)
+            
+        
+        # write total difficulty node
+        totalDifficulty = 0
+        for i in range(1, 20):
+            totalDifficulty += self.TermDifficulty[i].get_value(self.solver)
+        
+        totalDifficultyElement = xmldoc.createElementNS(None, "total_difficulty")
+        text = xmldoc.createTextNode(str(totalDifficulty))
+        totalDifficultyElement.appendChild(text)
+        resultsElement.appendChild(totalDifficultyElement)
+        
         # write the terms list
         for i in range(len(self.terms)):
             # create a new term node for each item in list
@@ -97,6 +126,6 @@ class Outputter:
                 
             resultsElement.appendChild(termElement)
         
-        #xmlstr = xmldoc.toxml('utf-8')
-        xmlstr = xmldoc.toprettyxml()
+        xmlstr = xmldoc.toxml('utf-8')
+        #xmlstr = xmldoc.toprettyxml()
         print xmlstr
