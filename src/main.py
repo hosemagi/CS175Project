@@ -98,13 +98,16 @@ def generateSchedule(majorName, max_term_units, preferredCourses):
     
     
     # CONSTRAINT: MAX UNIT LOAD IS ENFORCED FOR EACH TERM
-    # for each possible term
-    for term in range(1, len(courseTerms)):
-        # the sum of courses scheduled for the current term must be <= the max allowed in a single term
-        # 'i' represents the index of the course in the master course array
-        # 'courseTerms[i]' is the term course i is scheduled for
-        # 'term' is the current term we are adding the constraint for 
-        model.add(sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) <= max_term_units)
+    # Note: if we have chosen not to minimize the term to completion and use a heuristic instead,
+    # this constraint will be set later
+    if not optimizeTimeToCompletion:
+        # for each possible term
+        for term in range(1, len(courseTerms)):
+            # the sum of courses scheduled for the current term must be <= the max allowed in a single term
+            # 'i' represents the index of the course in the master course array
+            # 'courseTerms[i]' is the term course i is scheduled for
+            # 'term' is the current term we are adding the constraint for 
+            model.add(sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) <= max_term_units)
         
     
     # CONSTRAINT: MINIMUM UNIT REQUIREMENT FOR MAJOR IS MET
@@ -126,15 +129,14 @@ def generateSchedule(majorName, max_term_units, preferredCourses):
         # if we have chosen not to perform a true optimization to minimize the overall time to completion, we can apply the following heuristic
         # choose a minimum number of units to schedule per term based on the maximum, taken as min=ceil((max-1)/4)*4
         # enforce this constraint
+        min_term_units = 8
         if max_term_units > 16:
             min_term_units = 16
         elif max_term_units > 12:
             min_term_units = 12
-        else:
-            min_term_units = 8
-        model.add(sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) >= min_term_units)
+        model.add(min_term_units <= sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) <= max_term_units)
     
-    # Minimize overall difficulty
+    # OPTIMIZATION: FIND 
     #TermDifficulty = VarArray(len(major.courses), 0, 0)
     #if optimizeTotalDifficulty:
     #    TermDifficulty = VarArray(len(major.courses), 0, 15)
