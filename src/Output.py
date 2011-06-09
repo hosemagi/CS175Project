@@ -9,9 +9,10 @@ from xml.dom.minidom import getDOMImplementation
 
 class Outputter:
     
-    def __init__(self, major, courseTerms, solver):
+    def __init__(self, major, courseTerms, TermDifficulty, solver):
         self.major = major
         self.courseTerms = courseTerms
+        self.TermDifficulty = TermDifficulty
         self.solver = solver
         self.terms = []
         self.maxTerm = max([courseTerms[i].get_value(solver) for i in range(len(courseTerms))])
@@ -31,6 +32,7 @@ class Outputter:
             print "\nTerm " + str(i) + ": "
             coursesForTerm = [str(self.major.courses[j].courseCode) for j in range(len(self.courseTerms)) if (self.courseTerms[j].get_value(self.solver) == i)]
             print coursesForTerm
+            print "Difficulty: " + str(self.TermDifficulty[i].get_value(self.solver))
     
     # writes results as XML objects to output stream for use by UI
     def outputXML(self):

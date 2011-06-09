@@ -4,6 +4,7 @@
 ###########################
 
 import sys
+import math
 from datetime import datetime
 from Numberjack import *
 import Mistral
@@ -11,6 +12,14 @@ import DataStructures
 from Output import Outputter
 
 silent = True
+
+# Configuration Variables (default values) 
+selectedMajor = 'ics'               # the code for major to generate a plan for
+max_term_units = 20                 # the maximum number of units to schedule in an individual term
+preferredCourses = []               # a list of courses that the user wishes to include in the plan
+optimizeTimeToCompletion = False    # if this is false, we will use a heuristic method instead to find a reasonable time to completion
+optimizeTotalDifficulty = False     # if this is false, we will use a heuristic method instead to find a reasonable overall difficulty rating
+
 
 def debug_print(msg):
     if not silent:
@@ -26,24 +35,14 @@ def generateSchedule(majorName, max_term_units, preferredCourses):
     # A Numberjack array of Variables
     #    - the index of an element in the array represents a course (as its index in major.courses)
     #    - the value of element 'i' in the array is an int representing the term course 'i' was scheduled for
-    courseTerms = VarArray(len(major.courses), 0, len(major.courses))
+    courseTerms = VarArray(len(major.courses), 0, len(major.courses)/2)
     masterCourseTerms = range(1, len(major.courses))
-    
-    # Z is a Numberjack Variable that represents the maximum number of terms
-    # Ultimate goal is to produce solutions that minimize Z 
-    #Z = Variable(1, len(major.courses))
     
     # declare the Numberjack Constraint Model
     model = Model()
     
     # SEE page 14 fig. 4 of paper for mathematical constraints:
     #     http://www.csun.edu/~vcmgt0j3/Publications/CP05%20Paper.pdf
-    
-    # OBJECTIVE FUNCTION: minimize Z
-    # @TODO: currently this makes the solver take forever to run, investigate!
-    #for i in range(len(courseTerms)):
-    #    model.add(courseTerms[i] <= Z)
-    #model.add(Minimize(Z))
     
     # Get the min unit for the major
     minUnits = int(major.minUnits)
@@ -106,14 +105,42 @@ def generateSchedule(majorName, max_term_units, preferredCourses):
         model.add(sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) <= max_term_units)
         
     
-    # CONSTRAINT: Minimum units for major is met
+    # CONSTRAINT: MINIMUM UNIT REQUIREMENT FOR MAJOR IS MET
     model.add(sum([(int(major.courses[i].units) * (courseTerms[i]>0)) for i in range(len(courseTerms))]) >= minUnits )
     
-    # CONSTRAINT: Each preferred elective selected is taken
+    # CONSTRAINT: EACH PREFERRED ELECTIVE IS TAKEN
     for i in range(len(preferredCourses)):
         courseCode = preferredCourses[i]
         courseIndex = major.getCourseIndex(courseCode)
         model.add(courseTerms[courseIndex] > 0)
+    
+    # OPTIMIZATION: FIND A SCHEDULE WITH A REASONABLY LOW DIFFICULTY RATING
+    if optimizeTimeToCompletion:    
+        TermsToCompletion = Variable(1, len(major.courses))
+        for i in range(len(courseTerms)):
+            model.add(courseTerms[i] <= TermsToCompletion)
+        model.add(Minimize(TermsToCompletion))
+    #else:
+        # if we have chosen not to perform a true optimization to minimize the overall time to completion, we can apply the following heuristic
+        # choose a minimum number of units to schedule per term based on the maximum, taken as min=ceil((max-1)/4)*4
+        # enforce this constraint
+     #   if max_term_units > 16:
+     #       min_term_units = 16
+     #   elif max_term_units > 12:
+     #       min_term_units = 12
+     #   else:
+     #       min_term_units = 8
+     #   model.add(sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) >= min_term_units)
+    
+    # Minimize overall difficulty
+    #TermDifficulty = VarArray(len(major.courses), 0, 0)
+    #if optimizeTotalDifficulty:
+    #    TermDifficulty = VarArray(len(major.courses), 0, 15)
+    #    for term in range(len(TermDifficulty)):
+            # add the constraint that the value of the TermDifficulty[i] must be the sum
+            # of difficulty ratings for term [i]
+    #        model.add(TermDifficulty[term] == sum([(int(major.courses[i].diff) * (courseTerms[i] == term)) for i in range(len(courseTerms))]))
+    #    model.add(Minimize(Sum(TermDifficulty)))
     
     
     # Solve the Model
@@ -127,26 +154,21 @@ def generateSchedule(majorName, max_term_units, preferredCourses):
      
     # debug_print final solution
     #@TODO: this will eventually be formatted output for the php ui script to read       
-    outputter = Outputter(major, courseTerms, msolver)
+    outputter = Outputter(major, courseTerms, TermDifficulty, msolver)
     #outputter.outputXML()
     outputter.printSchedule()
-
-
 
 # Parse command-line args from PHP script or other source
 # argv[1] = major
 # argv[2] = max units per term
 # argv[3..n] = preferred course codes
 
-selectedMajor = 'ics'
 if len(sys.argv) > 1:
     selectedMajor = sys.argv[1]
 
-max_term_units = 20
 if len(sys.argv) > 2:
     max_term_units = int(sys.argv[2])
     
-preferredCourses = []
 if(len(sys.argv) > 3):
     for i in range(3, len(sys.argv)):
         courseCode = sys.argv[i]
@@ -154,7 +176,6 @@ if(len(sys.argv) > 3):
 
 # Generate a proposed schedule for selected major, or ics if none specified
 generateSchedule(selectedMajor, max_term_units, preferredCourses)
-
 
 
 # DONT LOOK HERE -- THIS IS WHERE CODE GOES TO DIE

@@ -66,7 +66,6 @@ class Course:
         self.title = "NoTitle"
         self.scheduledTerm = 0
         self.index = -1
-
         self.diff  = -1
         
 class CourseGroup:
