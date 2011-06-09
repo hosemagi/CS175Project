@@ -1,4 +1,4 @@
-﻿<major_requirements>
+<major_requirements>
 
   <major_title>INFORMATICS</major_title>
   <min_units>180</min_units>
@@ -6,7 +6,7 @@
   <groups>
 
     
-    <course_group>
+     <course_group>
       <title> Writing Requirement</title>
       <num_courses_required>3</num_courses_required>
       <courses>
@@ -14,6 +14,7 @@
         <course>
           <title>Critical Reading and Rhetoric</title>
           <code>WRITING39B</code>
+<diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -31,6 +32,7 @@
         <course>
           <title>Argument and Research</title>
           <code>WRITING39C</code>
+<diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -47,6 +49,7 @@
         <course>
           <title>Upper Division Writing</title>
           <code>WRITING139W</code>
+<diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -87,6 +90,7 @@
 
           <title>General Education III</title>
           <code>GEIII1</code>
+<diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -118,6 +122,7 @@
         <course>
           <title>General Education III</title>
           <code>GEIII2</code>
+<diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -150,6 +155,7 @@
         <course>
           <title>General Education III</title>
           <code>GEIII3</code>
+<diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -189,6 +195,7 @@
         <course>
           <title>General Education IV</title>
           <code>GEIV1</code>
+<diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -220,6 +227,7 @@
         <course>
           <title>General Education IV</title>
           <code>GEIV2</code>
+<diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -251,6 +259,7 @@
         <course>
           <title>General Education IV</title>
           <code>GEIV3</code>
+<diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -292,6 +301,7 @@
         <course>
           <title>General Education VI</title>
           <code>GEVI</code>
+<diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -332,6 +342,7 @@
         <course>
           <title>General Education VII</title>
           <code>GEVII</code>
+<diff>1</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -368,6 +379,7 @@
       <num_courses_required>1</num_courses_required>
       <courses>
         <course>
+<diff>1</diff>
           <title>General Education VIII</title>
           <code>GEVIII</code>
           <units>4</units>
@@ -408,6 +420,7 @@
         <course>
           <title>Informatics Core I</title>
           <code>IN4MATX41</code>
+          <diff>3</diff>
           <units>6</units>
           <offerings>
             <term_id>1</term_id>
@@ -438,6 +451,7 @@
         <course>
           <title>Informatics Core II</title>
           <code>IN4MATX42</code>
+          <diff>3</diff>
           <units>6</units>
           <offerings>
             <term_id>1</term_id>
@@ -469,6 +483,7 @@
         <course>
           <title>Informatics Core III</title>
           <code>IN4MATX43</code>
+          <diff>3</diff>
           <units>6</units>
           <offerings>
             <term_id>1</term_id>
@@ -500,6 +515,7 @@
         <course>
           <title>Seminar in Informatics Research</title>
           <code>IN4MATX44</code>
+          <diff>3</diff>
           <units>2</units>
           <offerings>
             <term_id>1</term_id>
@@ -522,6 +538,7 @@
         <course>
           <title>Patterns of Software Construction</title>
           <code>IN4MATX45</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>2</term_id>
@@ -558,6 +575,7 @@
         <course>
           <title>Boolean Algebra and Symbolic Logic</title>
           <code>ICS6B</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -591,6 +609,7 @@
         <course>
           <title>Stats</title>
           <code>MATH67</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>2</term_id>
@@ -621,6 +640,7 @@
       <course>
         <title>Symbolic Logic</title>
         <code>PHIL29</code>
+        <diff>3</diff>
         <units>4</units>
         <offerings>
           <term_id>1</term_id>
@@ -660,6 +680,7 @@
         <course>
           <title>Human Computer Interaction</title>
           <code>IN4MATX131</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>2</term_id>
@@ -681,6 +702,7 @@
         <course>
           <title>Requirements Analysis and Engineering</title>
           <code>IN4MATX113</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>2</term_id>
@@ -703,6 +725,7 @@
         <course>
           <title>Project Management</title>
           <code>IN4MATX151</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>2</term_id>
@@ -724,6 +747,7 @@
         <course>
           <title>Software Design I</title>
           <code>IN4MATX121</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -755,6 +779,7 @@
         <course>
           <title>Social Analysis of Computerization</title>
           <code>IN4MATX161</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -795,6 +820,7 @@
         <course>
           <title>Senior Design Project</title>
           <code>IN4MATX191A</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             
@@ -820,6 +846,7 @@
         <course>
           <title>Senior Design Project B</title>
           <code>IN4MATX191B</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             
@@ -842,6 +869,7 @@
         <course>
           <title>Senior Design Project C</title>
           <code>IN4MATX191C</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
            
@@ -875,6 +903,7 @@
         <course>
           <title>Concepts in Programming Languages I</title>
           <code>IN4MATX101</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -907,6 +936,7 @@
         <course>
           <title>Concepts in Programming Languages II</title>
           <code>IN4MATX102</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             
@@ -934,6 +964,7 @@
         <course>
           <title>Software Tools and Methods</title>
           <code>IN4MATX111</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -965,6 +996,7 @@
         <course>
           <title>Software Testing and QA</title>
           <code>IN4MATX115</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -996,6 +1028,7 @@
         <course>
           <title>Project in Software System Design</title>
           <code>IN4MATX117</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -1028,6 +1061,7 @@
         <course>
           <title>Software Design II</title>
           <code>IN4MATX122</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -1060,6 +1094,7 @@
         <course>
           <title> Software Architectures, Distributed Systems, and Interoperability</title>
           <code>IN4MATX123</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             
@@ -1085,6 +1120,7 @@
         <course>
           <title> User Interaction Software</title>
           <code>IN4MATX133</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -1117,6 +1153,7 @@
         <course>
           <title>Intro to Data Management</title>
           <code>CS122A</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
 
@@ -1158,6 +1195,7 @@
         <course>
           <title>Computer and Network Security</title>
           <code>CS134</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>3</term_id>
@@ -1182,6 +1220,7 @@
         <course>
           <title>Formal Language and Automation</title>
           <code>CS162</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>
@@ -1212,6 +1251,7 @@
         <course>
           <title>Computational Geometry</title>
           <code>CS164</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -1245,6 +1285,7 @@
         <course>
           <title>Project in HCI</title>
           <code>IN4MATX132</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -1278,6 +1319,7 @@
         <course>
           <title>Project in Social Impact of Computing</title>
           <code>IN4MATX163</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -1309,6 +1351,7 @@
         <course>
 					<title>Principles of Operating Systems</title>
 					<code>CS143A</code>
+					<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>2</term_id>
@@ -1340,6 +1383,7 @@
         <course>
           <title>Project in Operating Systems</title>
           <code>CS143B</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>2</term_id>
@@ -1370,6 +1414,7 @@
         <course>
           <title>Advanced Computer Networks</title>
           <code>CS133</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>2</term_id>
@@ -1402,6 +1447,7 @@
         <course>
           <title>Computer Game Development</title>
           <code>CS113</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -1429,6 +1475,7 @@
         <course>
           <title>Computer Networks</title>
           <code>CS132</code>
+          <diff>3</diff>
           <units>4</units>
           <offerings>
             <term_id>1</term_id>
@@ -1469,6 +1516,7 @@
     <course>
 			<title>Discrete Math for CS</title>
 			<code>ICS6D</code>
+			<diff>3</diff>
 			<units>4</units>
 			<offerings>
         <term_id>2</term_id>
@@ -1498,6 +1546,7 @@
 		<course>
 			<title>Intro to Computer Organization</title>
 			<code>ICS51</code>
+			<diff>3</diff>
 			<units>6</units>
 			<offerings>
         <term_id>1</term_id>
@@ -1529,6 +1578,7 @@
 		<course>
 					<title>Calculus</title>
 					<code>MATH2A</code>
+					<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -1558,6 +1608,7 @@
 		<course>
 					<title>Calculus</title>
 					<code>MATH2B</code>
+					<diff>3</diff>
 					<units>4</units>
 					<offerings>
             <term_id>1</term_id>
@@ -1589,6 +1640,7 @@
 				<course>
 			<title>Linear Algebra</title>
 			<code>MATH6G</code>
+			<diff>3</diff>
 			<units>4</units>
 			<offerings>
         <term_id>1</term_id>
