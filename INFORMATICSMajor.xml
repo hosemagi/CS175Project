@@ -615,7 +615,6 @@
           </offerings>
           <prereqs>
             
-            
           </prereqs>
         </course>
 
@@ -1586,36 +1585,7 @@
 						<course_code>MATH2A</course_code>
 					</prereqs>
 				</course>
-				<course>
-					<title>Intro to Prob and Stats for CS</title>
-					<code>MATH67</code>
-					<units>4</units>
-					<offerings>
-            <term_id>1</term_id>
-            <term_id>2</term_id>
-            <term_id>3</term_id>
-            <term_id>4</term_id>
-            <term_id>5</term_id>
-            <term_id>6</term_id>
-            <term_id>7</term_id>
-            <term_id>8</term_id>
-            <term_id>9</term_id>
-            <term_id>10</term_id>
-            <term_id>11</term_id>
-            <term_id>12</term_id>
-            <term_id>13</term_id>
-            <term_id>14</term_id>
-            <term_id>15</term_id>
-            <term_id>16</term_id>
-            <term_id>17</term_id>
-            <term_id>18</term_id>
-            <term_id>19</term_id>
-            <term_id>20</term_id>
-					</offerings>
-					<prereqs>
-						<course_code>MATH2B</course_code>
-					</prereqs>
-				</course>
+				
 				<course>
 			<title>Linear Algebra</title>
 			<code>MATH6G</code>

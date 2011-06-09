@@ -15,7 +15,7 @@ silent = True
 
 # Configuration Variables (default values) 
 selectedMajor = 'ics'               # the code for major to generate a plan for
-max_term_units = 20                 # the maximum number of units to schedule in an individual term
+max_term_units = 20               # the maximum number of units to schedule in an individual term
 preferredCourses = []               # a list of courses that the user wishes to include in the plan
 optimizeTimeToCompletion = False    # if this is false, we will use a heuristic method instead to find a reasonable time to completion
 optimizeTotalDifficulty = False     # if this is false, we will use a heuristic method instead to find a reasonable overall difficulty rating
@@ -132,7 +132,7 @@ def generateSchedule(majorName, max_term_units, preferredCourses):
             min_term_units = 12
         else:
             min_term_units = 8
-        model.add(sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) >= min_term_units)
+        #model.add(sum([(int(major.courses[i].units) * (courseTerms[i] == term)) for i in range(len(courseTerms))]) >= min_term_units)
     
     # Minimize overall difficulty
     #TermDifficulty = VarArray(len(major.courses), 0, 0)
